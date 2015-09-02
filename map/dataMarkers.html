@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile - Map - Data Markers</title>    
+    <link rel="stylesheet" href="../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../themes/samplestyle.css" />
+	<link rel="stylesheet" href="../../desktop/themes/ej.theme.css" />
+    <script type="text/javascript" src="../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.ko.min.js"></script>
+	
+</head>
+<script type="text/javascript">
+    $(function () {
+        createMap();
+    });
+</script>
+<body onload="onRender()">
+    <script type="text/javascript" src="../scripts/MapsData/DataMarkerData.min.js"></script>
+    <style type="text/css">
+        .popup
+        {
+            border: 1px solid #A0A0A0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            bottom: 2em;
+            border-radius: 7px;
+            position: absolute;
+            left: 70%;
+            opacity: 0.8;
+            display: none;
+            width: 160px;
+            padding: 6px;
+            height: 50px;
+            background: white;
+        }
+        
+        .close-btn
+        {
+            border: 2px solid #A0A0A0;
+            position: absolute;
+            opacity: 0.8;
+            background-color: #A0A0A0;
+            left: 90%;
+            top: 77.5%;
+            border-radius: 50%/50%;
+            width: 18px;
+            height: 19px;
+            display: none;
+            z-index: 1000;
+        }
+        
+        .close-btn a
+        {
+            font-size: 12px;
+            margin-left: 5px;
+            top: 2px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            position: absolute;
+        }
+        
+        .annotation-outer
+        {
+            border: 2px solid #F89520;
+            position: absolute;
+            opacity: 0.4;
+            margin-left: -13px;
+            margin-top: -16px;
+            background-color: #F89520;
+            border-radius: 50%/50%;
+            width: 23px;
+            height: 24px;
+            display: block;
+            z-index: 1000;
+        }
+        
+        .annotation-inner
+        {
+            border: 2px solid #F89520;
+            position: absolute;
+            opacity: 0.9;
+            margin-left: -6px;
+            margin-top: -8px;
+            background-color: #F89520;
+            border-radius: 50%/50%;
+            width: 9px;
+            height: 9px;
+            display: block;
+            z-index: 1000;
+        }
+        
+        .annotation-inner:hover
+        {
+            background-color: #3D3C3A;
+            border: 2px solid #3D3C3A;
+        }
+        
+        .home-circle
+        {
+            border: 2px solid #85CBE5;
+            opacity: 0.8;
+            background-color: #85CBE5;
+            top: 10px;
+            left: 85%;
+            border-radius: 50%/50%;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            z-index: 1000;
+        }
+        .e-map
+        {
+            background-color: white;
+        }
+        .home-circle:hover
+        {
+            border: 2px solid white;
+        }
+    </style>
+    <div style="height: inherit">
+        <div id="container" data-role="ejmmaps" style="height: inherit">
+        </div>
+        <div style="background-color: #FAFAF9; border-color: lightgray; border-width: 2px;
+            opacity: 0.7; top: 10px; position: absolute; height: 38px">
+            <label style="color: Black; font-size: 16px; margin: 8px; margin-top: 8px; margin-left: 15px;
+                margin-right: 15px; height: 18px; font-weight: Normal;">
+                Syncfusion Locations</label>
+        </div>
+        <div class="popup" id="closepopup">
+            <table style="width: auto">
+                <tr>
+                    <td align="left" style="padding: 0.3px">
+                        <label id="city" style="color: Black; font-size: 18px; font-weight: normal; margin-left: 5px">
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="padding: 0.3px">
+                        <label id="country" style="color: Black; font-size: 14px; font-weight: normal; margin-left: 5px">
+                        </label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="close-btn" id="closebutton">
+            <a href="#">X</a></div>
+        <div class="home-circle" id="home" onclick="onClick()">
+            <svg xmlns='http://www.w3.org/2000/svg' width="20" height="20" viewbox="0 0 20 20"
+                style="margin-left: 5px; margin-top: 4px">
+                <g>
+                </g><path d="M20 11.532l-10-7.762-10 7.762v-3.165l10-7.762 10 7.762zM17.5 11.25v7.5h-5v-5h-5v5h-5v-7.5l7.5-5.625z"
+                    fill="white" /></svg>
+        </div>
+    </div>
+    <script>
+        function createMap() {
+            var ua = window.navigator.userAgent;
+            var msie = ua.indexOf("MSIE ");
+            if (ej.isDevice()) {
+                $("#container").css("height", innerHeight - 50);
+            }
+            else {
+				if (msie > 0) {
+					$("#container").css("height", innerHeight - 450);				
+				}
+				else
+				{
+					$("#container").css("height", innerHeight - 250);				
+				}				
+            }
+            $("#container").ejMap({
+
+                enableResize: true,
+                onRenderComplete: "onRender",
+                centerPosition: [38.5000, -98],
+                markerSelected: 'onSelect',
+                enableAnimation: true,
+                layers: [
+                   {
+                       layerType: "geometry",
+                       enableSelection: false,
+                       enableAnimation: true,
+                       enableMouseHover: true,
+                       markers: syncfusion_locations,
+                       showMapItems: false,
+                       markerTemplate: 'template',
+                       shapeSettings: {
+                           fill: "#626171",
+                           strokeThickness: "1",
+                           stroke: "#6F6F79",
+                           highlightStroke: "#6F6F79",
+                           valuePath: "name",
+                           highlightColor: "gray"
+
+                       },
+                       shapeData: world_map
+
+                   }
+             ]
+
+            });
+        }
+        function onRender() {
+
+            var popup = document.getElementById("closepopup");
+            var closebutton = document.getElementById("closebutton");
+            var homeButton = document.getElementById("home");
+            var width = $("#container").width();
+            var height = $("#container").height();
+            if (height > width) {
+
+                $(closebutton).css("left", (width / 2) + 73);
+                $(popup).css("left", (width - 250));
+            }
+            else {
+                $(popup).css("left", width - 220);
+                $(closebutton).css("left", (width - 220) + 162);
+                $(homeButton).css("left", width - 50 + "px");
+            }
+            var popupPercent = height * (80 / 100);
+            $(closebutton).css("top", popupPercent - 11 + "px");
+            $(popup).css("top", popupPercent + "px");
+        }
+        function onSelect(event) {
+            var object = event.originalEvent.data;
+            var popup = document.getElementById("closepopup");
+            var closebutton = document.getElementById("closebutton");
+            var city = document.getElementById("city");
+            var country = document.getElementById("country");
+            $(popup).css("display", "block");
+            $(closebutton).css("display", "block");
+            $(closebutton).click(function () {
+                var popup = document.getElementById("closepopup");
+                var closebutton = document.getElementById("closebutton");
+                $(popup).css("display", "none");
+                $(closebutton).css("display", "none");
+            });
+            city.innerHTML = object.Name;
+            country.innerHTML = object.Country;
+        }
+
+        function onClick() {
+            $("#container").ejMap("navigateTo", -90, 100, 1);
+        }
+        
+    </script>
+    <script id="template" type="application/jsrender">	
+    
+        <div>
+            <div class="annotation-outer">
+            </div>
+            <div class="annotation-inner">
+            </div>
+        </div>
+    </script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+#apitoolbar, #splitview .e-m-sp-right .e-m-header .e-m-header-left, #splitview.e-m-windows .e-m-sp-right .e-m-header, #splitview.e-m-windows .e-m-sp-left .e-m-header, .e-m-ios7 #apitoolbar, .e-m-android #apitoolbar, #phoneappview, #tabitem {
+    display: none;
+}
+
+.e-m-android #controlstile .group .column .e-m-tile-wrapper-small {
+    margin: 15px;
+}
+
+.appview.e-m-windows #health .e-m-tile-image:before, .appview.e-m-windows #stock .e-m-tile-image:before {
+    font-size: 95px;
+    line-height: 260px;
+    top: 0px;
+}
+	.sample.progresssample{
+	width:580px;
+	margin:0 auto;
+}
+@media (max-width:620px) and (orientation:portrait) {
+    .appview.stockpage.e-m-android .value {
+left: 19px ;
+top: 8px ;
+font-weight: 400 ;
+}
+}
+@media (min-width:480px) and (max-width:800px) and (orientation:portrait) {
+.sample.progresssample{
+	width:340px;
+	margin:0 auto;
+}
+}
+@media all and (max-width: 480px) and (orientation:portrait), only screen and (min-width : 480px) and (max-width : 640px) and (orientation: portrait),all and (max-width: 800px) and (orientation:landscape) {
+    /* Navigation to home page */
+    #androidheader, #windowsheader, #settings, #apidialog, .appview.e-m-ios7 #apitoolbar, .appview.e-m-android #apitoolbar {
+        display: none;
+    }
+
+    .e-m-ios7.e-m-tablet .defaultsample {
+        height: 975px;
+    }
+
+    #splitview .e-m-sp-right .e-m-header .e-m-header-left, #splitview.e-m-windows .e-m-sp-right .e-m-header, #splitview.e-m-windows .e-m-sp-left .e-m-header {
+        display: block;
+    }
+
+    #tabletappview, #splitview .e-m-sp-left .e-m-header .e-m-header-left {
+        display: none;
+    }
+
+    #phoneappview, #tabitem {
+        display: block;
+    }
+
+    #apisettings {
+        display: block;
+    }
+
+    #apisettingsnav, #stocknav {
+        display: none;
+    }
+
+    #showcasetabwrapper {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+        #showcasetabwrapper > div {
+            margin: 0px auto;
+            width: 280px;
+            display: table;
+        }
+
+    #properties_rightscroller .col-md-3 {
+        padding-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+        white-space: nowrap;
+        width: 50%;
+    }
+
+    .appview.e-m-windows #windowssampleheader {
+        display: none;
+    }
+
+    #tabitem_wrapper.e-m-windows.e-m-tab-content .e-m-content {
+        padding: 0;
+    }
+
+    .e-m-content-container {
+        position: relative;
+    }
+
+    #settings.e-m-android.e-m-dialog .e-m-dlg.e-m-dlg-alert {
+        width: 65%;
+    }
+
+    #apisettingsnav, #stocknav {
+        display: block;
+    }
+
+    #apisettings {
+        right: 45px;
+    }
+
+    .e-m-windows #apitoolbar {
+        display: block;
+    }
+
+    .appview.e-m-windows #health .e-m-tile-image:before {
+        font-size: 80px;
+        left: -23px;
+        line-height: 40px;
+        top: 37px;
+    }
+
+    .appview.e-m-windows #expense .e-m-tile-image:before {
+        font-size: 58px;
+        left: 8px;
+        line-height: 40px;
+        top: 39px;
+    }
+
+    .appview.e-m-windows #sales .e-m-tile-image:before {
+        font-size: 95px;
+        left: -7px;
+        line-height: 40px;
+        top: 33px;
+    }
+
+    .appview.e-m-windows #stock .e-m-tile-image:before {
+        font-size: 95px;
+        left: -21px;
+        line-height: 40px;
+        top: 39px;
+    }
+
+    .appview.e-m-windows #windowssampleheader {
+        display: none;
+    }
+
+    #splitview .e-m-sp-right .e-m-header .e-m-header-left {
+        display: block;
+    }
+
+    #splitview .e-m-sp-left .e-m-header .e-m-header-left {
+        display: none;
+    }
+	.sample.progresssample{
+	width:320px;
+	margin:0 auto;
+}
+}
+
+
+/*Sample Images*/
+#expense .e-m-icon-expense:before {
+    font-size: 58px;
+    left: 8px;
+    line-height: 40px;
+    top: 23px;
+}
+
+#health .e-m-icon-health:before {
+    font-size: 80px;
+    left: -4px;
+    line-height: 40px;
+    top: 20px;
+}
+
+#sales .e-m-icon-sales:before {
+    font-size: 95px;
+    left: -7px;
+    line-height: 40px;
+    top: 20px;
+}
+
+#stock .e-m-icon-stock:before {
+    font-size: 65px;
+    left: -2px;
+    line-height: 40px;
+    top: 20px;
+}
+
+.icn-ShowCase:before {
+    font-size: 36px;
+    left: -10px;
+    top: -4px;
+}
+
+.icn-AllControls:before {
+    font-size: 47px;
+    left: -14px;
+    top: -9px;
+}
+
+.icn-About:before {
+    font-size: 86px;
+    left: -33px;
+    top: -29px;
+}
+
+[class^="e-m-icon-"], [class*=" e-m-icon-"] {
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1; /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-top: 0;
+}
+
+#sales, #sales > div {
+    background: rgb(253,180,70); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(253,180,70,1) 0%, rgba(224,145,52,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(253,180,70,1)), color-stop(100%,rgba(224,145,52,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(253,180,70,1) 0%,rgba(224,145,52,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(253,180,70,1) 0%,rgba(224,145,52,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(253,180,70,1) 0%,rgba(224,145,52,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(253,180,70,1) 0%,rgba(224,145,52,1) 100%); /* W3C */
+    filter: progid:DXImageTrane-m-orm.Microsoft.gradient( startColorstr='#fdb446', endColorstr='#e09134',GradientType=0 ); /* IE6-9 */
+}
+
+#health, #health > div {
+    background: rgb(243,76,76); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(243,76,76,1) 0%, rgba(184,44,44,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(243,76,76,1)), color-stop(100%,rgba(184,44,44,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(243,76,76,1) 0%,rgba(184,44,44,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(243,76,76,1) 0%,rgba(184,44,44,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(243,76,76,1) 0%,rgba(184,44,44,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(243,76,76,1) 0%,rgba(184,44,44,1) 100%); /* W3C */
+    filter: progid:DXImageTrane-m-orm.Microsoft.gradient( startColorstr='#f34c4c', endColorstr='#b82c2c',GradientType=0 ); /* IE6-9 */
+}
+
+#expense, #expense > div {
+    background: rgb(44,184,184); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(44,184,184,1) 1%, rgba(12,154,144,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(44,184,184,1)), color-stop(100%,rgba(12,154,144,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(44,184,184,1) 1%,rgba(12,154,144,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(44,184,184,1) 1%,rgba(12,154,144,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(44,184,184,1) 1%,rgba(12,154,144,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(44,184,184,1) 1%,rgba(12,154,144,1) 100%); /* W3C */
+    filter: progid:DXImageTrane-m-orm.Microsoft.gradient( startColorstr='#2cb8b8', endColorstr='#0c9a90',GradientType=0 ); /* IE6-9 */
+}
+
+#stock, #stock > div {
+    background: rgb(123,212,251); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(123,212,251,1) 1%, rgba(33,163,218,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(123,212,251,1)), color-stop(100%,rgba(33,163,218,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(123,212,251,1) 1%,rgba(33,163,218,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(123,212,251,1) 1%,rgba(33,163,218,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(123,212,251,1) 1%,rgba(33,163,218,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(123,212,251,1) 1%,rgba(33,163,218,1) 100%); /* W3C */
+    filter: progid:DXImageTrane-m-orm.Microsoft.gradient( startColorstr='#7bd4fb', endColorstr='#21a3da',GradientType=0 ); /* IE6-9 */
+}
+
+.e-m-windows #showcasetabwrapper div#health.e-m-tile, .e-m-windows #showcasetabwrapper div#stock.e-m-tile {
+    width: 270px !important;
+}
+
+.e-m-windows #showcasetabwrapper div#sales.e-m-tile, .e-m-windows #showcasetabwrapper div#expense.e-m-tile {
+    width: 130px !important;
+}
+
+.aboutcontent, #showcasetabwrapper {
+    display: table-cell;
+}
+
+#showcasetabwrapper {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.e-m-windows #controllist .bgrectdiv {
+    left: 20px;
+}
+
+.e-m-lv .e-m-list-img.bgrect {
+    background: #21AD9F;
+    border-radius: 5px;
+    display: inline-block;
+    height: 38px;
+    padding: 10px;
+    width: 38px;
+    box-sizing: border-box;
+}
+
+.e-m-list-img.e-m-rel.e-m-user-select.bgrect:before {
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+}
+
+.e-m-windows .bgrect {
+    border-radius: 0;
+}
+
+#abouttab {
+    padding: 10px;
+}
+
+#tabitem.e-m-tab.e-m-windows.e-m-dark .e-m-state-active .e-m-tab-text, .e-m-windows.e-m-header.e-m-dark .e-m-header-title span, .e-m-ios7 .aboutcontent .title, .e-m-ios7 .aboutcontent .title, .e-m-android .aboutcontent .bottom, .e-m-windows .aboutcontent .bottom, .e-m-windows #settings .e-m-header-text {
+    color: #059b9b;
+}
+
+.aboutcontent .title {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.e-m-ios7 .aboutcontent * {
+    color: #575757;
+}
+
+.e-m-ios7 .aboutcontent .versiontext {
+    color: #787475;
+}
+
+.e-m-ios .aboutcontent .anchor, .e-m-ios7 .aboutcontent .anchor {
+    padding-top: 15px;
+    text-decoration: underline;
+}
+
+.appview.e-m-ios7 .contact, .appview.e-m-ios7 .bottom {
+    margin-top: 10px;
+}
+
+.aboutcontent .bottom {
+    font-size: 19px;
+}
+
+.e-m-icon-grid:before {
+    left: -5px;
+}
+
+.e-m-mobile.e-m-windows #splitview .e-m-header-text.e-m-light.e-m-user-select {
+    margin-left: 0;
+}
+
+.e-m-mobile #splitview.e-m-splitpane[data-ej-leftheadersettings-title~=TileView] .e-m-sp-rightwrapper,.e-m-mobile #splitview.e-m-splitpane[data-ej-leftheadersettings-title~=Rotator] .e-m-sp-rightwrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0;
+}
+.e-m-mobile #splitview.e-m-splitpane #rotator_rightscroller.e-m-sp-rightwrapper{
+    padding-left: 0px;
+}
+.e-m-mobile #splitview.e-m-splitpane .e-m-sp-rightwrapper {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+}
+
+.e-m-mobile .e-m-splitpane #properties_rightscroller.e-m-sp-rightwrapper {
+    padding-right: 20px;
+}
+
+.e-m-windows.e-m-dark #controllist .e-m-list-hdr, .e-m-windows.e-m-dark #controllist .e-m-list-hdr .e-m-list.e-m-state-active, .e-m-windows.e-m-dark #splitview .e-m-list-hdr, .e-m-windows.e-m-dark #splitview .e-m-list-hdr .e-m-list.e-m-state-active, .e-m-windows.e-m-dark #splitview .e-m-sp-right .e-m-header {
+    background: #000000;
+}
+
+.e-m-windows.e-m-dark #splitview .e-m-sp-left, .e-m-windows.e-m-dark #splitview .e-m-sp-left .e-m-list-hdr, .e-m-windows.e-m-dark #splitview .e-m-sp-left .e-m-list-hdr .e-m-list.e-m-state-active {
+    background: #1e1e1e;
+}
+
+.e-m-windows.e-m-dark #controllist .e-m-list-hdr, .e-m-windows.e-m-dark #controllist .e-m-list-hdr .e-m-list.e-m-state-active, .e-m-windows.e-m-dark #splitview .e-m-list-hdr, .e-m-windows.e-m-dark #splitview .e-m-list-hdr .e-m-list.e-m-state-active, .e-m-windows.e-m-dark #splitview .e-m-sp-right .e-m-header {
+    background: #000000;
+}
+
+.e-m-windows.e-m-dark #splitview .e-m-sp-left, .e-m-windows.e-m-dark #splitview .e-m-sp-left .e-m-list-hdr, .e-m-windows.e-m-dark #splitview .e-m-sp-left .e-m-list-hdr .e-m-list.e-m-state-active {
+    background: #1e1e1e;
+}
+
+#tabitem .e-m-windows, .e-m-lv.e-m-windows .e-m-list-container, .e-m-windows.e-m-header.e-m-dark, .e-m-lv.e-m-windows.e-m-dark .e-m-list-hdr, .e-m-lv.e-m-windows.e-m-dark .e-m-list.e-m-state-active {
+    background: #1E1E1E;
+}
+
+#aboutcontent .title {
+    font-size: 25px;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,826 @@
+li {
+    list-style-type:none;
+}
+/*To hide windows header in ios mode*/
+.appview.e-m-ios7 #windowsheader, .appview.e-m-android #windowsheader, .appview.e-m-ios7 #windowssampleheader, .appview.e-m-android #windowssampleheader
+{
+    display: none;
+}
+ .e-m-safari-content {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    }
+.e-m-ios7 #androidheader, .e-m-windows #androidheader
+{
+    display: none;
+}
+/*To hide ios header in android and windows mode*/
+.e-m-android #showcaseheader, .e-m-windows #showcaseheader
+{
+    display: none;
+}
+/*dashboard title*/
+.e-m-tablet.e-m-ios7 .topnav
+{
+    border-bottom: 2px solid #c8c8c8;
+    padding-bottom: 10px;
+}
+
+.e-m-tablet.e-m-ios7 .heading1
+{
+    color: #292929;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.leftpadding.heading1
+{
+    display: inline-block;
+}
+
+.heading1
+{
+    margin: 20px 0 12px;
+}
+
+.leftpadding, #controlsgrid, .e-m-tablet .topnav
+{
+    padding-left: 2.7%;
+}
+/* SVG font image family */
+.bottomnav [class*="e-m-icon-"]:before, #topnavwrapper .e-m-tile-image:before,#aboutpageicon .aboutpageicon:before, .e-m-ios7 #apisettings .settingsapi:before, #showcasetabwrapper .e-m-tile-image:before
+{
+    font-family: ejmmobilefonts;
+    position: relative;
+    color: #eeeeee;
+    display: block;
+    text-align: center;
+}
+.e-m-tab-image.e-m-icon-showcase:before{
+    top:10px;
+    font-size:35px;
+    position:relative;
+    left:-12px;
+}
+.e-m-tab-image.e-m-icon-allcontrols:before{
+    top:12px;
+    font-size:45px;
+    position:relative;
+    left:-15px;
+}
+.e-m-tab-image.e-m-icon-about:before{
+    top:16px;
+    font-size:90px;    
+    position:absolute;
+    left:-37px;
+}
+.e-m-list-container [class*="bgrect e-m-icon-"]:before, [class^="bgrect e-m-icon-"]:before 
+{
+    color: #eeeeee;    
+}
+#controllist .e-m-ios7 .e-m-list.e-m-state-active
+{
+    background: #d9d9d9;
+}
+#controllist .e-m-ios7 .e-m-list.e-m-state-active .e-m-list-div
+{
+    border-bottom-color: #dddce1;
+}
+#controllist .e-m-ios7 .e-m-list.e-m-state-active .e-m-list-text
+{
+    color: #000;
+}
+#controllist .e-m-android .e-m-list.e-m-state-active .e-m-list-div
+{
+    background: none repeat scroll 0 0 #129e97;
+    border-bottom-color: #129e97;
+}
+/*dashboard list svg font image*/
+.e-m-ios7 #controlsgrid.group,.e-m-android #controlsgrid.group
+{
+    width:inherit;
+}
+.e-m-ios7 #controlsgrid .e-m-tile-badge, .e-m-android #controlsgrid .e-m-tile-badge
+{
+    font-size: 10px;
+}
+.e-m-ios7 #TileView .e-m-tile-badge, .e-m-ios7 #ListView .e-m-tile-badge, .e-m-android #TileView .e-m-tile-badge, .e-m-android #ListView .e-m-tile-badge
+{
+    right: -10px;
+}
+.e-m-android #controlsgrid .e-m-tile-badge
+{
+    top: -12px;
+}
+.e-m-windows #controlsgrid .e-m-tile-badge
+{
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    right: 4px;
+    color: brown;
+}
+#controllist .listbadge
+{
+    font-size: 12px;
+    left: 3px;
+    position: relative;
+    top: -8px;
+}
+.e-m-windows #controllist .listbadge
+{
+    color: brown;
+}
+.e-m-android #controllist .listbadge
+{
+    color: #33b5e5;
+}
+.e-m-tile-wrapper.e-m-tile-wrapper-wide.e-m-ios7, .e-m-tile-wrapper.e-m-tile-wrapper-large.e-m-ios7
+{
+    border-radius: 12px;
+}
+
+.e-m-tile.e-m-tile-wrapper.e-m-ios7 .e-child-tile .e-m-tile-text
+{
+    font-size: 14px;
+}
+
+.appview.e-m-android #samplestile
+{
+    border-bottom: 1px solid #a1a1a1;
+    padding-bottom: 18px;
+}
+.appview .textbox_sample label.error {
+           color: #FF0000;
+
+}
+#topnavwrapper .e-m-tile-image:before
+{
+    font-size: 5.5em;
+}
+/*dashboard list tile backgrounds*/
+#topnavwrapper #health, #showcasetabwrapper #health
+{
+    background: #D73E3E;
+}
+
+#topnavwrapper #stock, #showcasetabwrapper #stock
+{
+    background: #2EAACC;
+}
+
+#topnavwrapper #sales, #showcasetabwrapper #sales
+{
+    background: #EDA03C;
+}
+
+#topnavwrapper #expense, #showcasetabwrapper #expense
+{
+    background: #21AD9F;
+}
+
+/*dashboard list content images*/
+#topnavwrapper .e-m-icon-health:before
+{    
+    left: -4px;
+    top: 64px;
+}
+
+#topnavwrapper .e-m-icon-sales:before
+{    
+    font-size: 105px;
+    top: 64px;
+}
+
+#topnavwrapper .e-m-icon-stock:before
+{    
+    left: -3px;
+    top: 64px;
+}
+
+#topnavwrapper .e-m-icon-expense:before
+{    
+    left: 30px;
+    top: 64px;
+}
+
+
+/*Controls tile background and images*/
+
+.bottomnav .e-m-tile-wrapper.e-m-tile .e-m-tile-image
+{
+    background: #86BA35;
+}
+
+.bottomnav [class*="e-m-icon-image"]:before
+{
+    line-height: 55px;
+    top: 2px;
+    left: 15px;
+    position: absolute;
+}
+
+.appview.e-m-ios .bottomnav [class*="e-m-icon-"]:before, .appview.e-m-ios7 .bottomnav [class*="e-m-icon-"]:before
+{
+    font-size: 30px;
+    top:29px;
+}
+
+.appview.e-m-android .bottomnav [class*="e-m-icon-"]:before
+{
+    font-size: 30px;
+}
+
+#ToolBar .e-m-icon-toolbar:before
+{    
+    left: 4px;
+}
+
+#TimePicker .e-m-icon-timepicker:before
+{    
+    left: 3px;
+}
+
+#TileView .e-m-icon-tileview:before
+{    
+    top: 28px;
+}
+
+#Textbox .e-m-icon-textbox:before
+{    
+    left: 1px;
+}
+
+#Tab .e-m-icon-tab:before
+{ 
+    left: 1px;
+}
+
+#Slider .e-m-icon-slider:before
+{    
+    left: 2px;
+}
+
+#Rotator .e-m-icon-rotator:before
+{ 
+    left: 0px;
+}
+
+#Rating .e-m-icon-rating:before
+{    
+    left: 1px;
+    top: 28px;
+}
+
+#ListView .e-m-icon-listview:before
+{    
+    left: 4px;
+}
+
+#NavigationDrawer .e-m-icon-navigationdrawer:before
+{    
+    left: 2px;
+}
+
+#RadialMenu .e-m-icon-radialmenu:before
+{    
+    left: 0px;
+}
+#ProgressBar .e-m-icon-progressbar:before{
+    left:0px;
+}
+.e-m-android #NavigationDrawer .e-m-icon-navigationdrawer:before, .e-m-android #RadialMenu .e-m-icon-radialmenu:before
+{
+    left: 1px;
+    top: 21px;
+}
+.e-m-windows #NavigationDrawer .e-m-icon-navigationdrawer:before, .e-m-windows #RadialMenu .e-m-icon-radialmenu:before
+{
+    left: 0px;
+    top: 28px;
+}
+.appview.e-m-android #Grid .e-m-icon-grid:before, .appview.e-m-ios7 #Grid .e-m-icon-grid:before, .appview.e-m-windows #Grid .e-m-icon-grid:before
+{    
+    left: -1px;
+    top: 27px;
+}
+
+#DatePicker .e-m-icon-datepicker:before
+{    
+    left: 0px;
+}
+
+#Button .e-m-icon-button:before
+{    
+    left: 2px;
+}
+
+#Barcode .e-m-icon-barcode:before
+{    
+    font-size: 38px;
+    left: 1px;
+}
+#Barcode .e-m-icon-barcode:before
+{    
+    font-size: 38px;
+    left: 1px;
+}
+/*for windows*/
+
+.appview.e-m-windows .bottomnav [class*="e-m-icon-"]:before
+{
+    font-size: 52px;
+    line-height: 55px;
+}
+
+.appview.e-m-windows #ToolBar .e-m-icon-toolbar:before, .appview.e-m-windows #TimePicker .e-m-icon-timepicker:before, .appview.e-m-windows #TileView .e-m-icon-tileview:before, .appview.e-m-windows #Slider .e-m-icon-slider:before
+{
+    left: 5px;
+    top: 29px;
+}
+
+.appview.e-m-windows #Accordion .e-m-icon-accordion:before, .appview.e-m-windows #Textbox .e-m-icon-textbox:before, .appview.e-m-windows #Rating .e-m-icon-rating:before, .appview.e-m-windows #ProgressBar .e-m-icon-progressbar:before, .appview.e-m-windows #Rotator .e-m-icon-rotator:before, .appview.e-m-windows #Dialog .e-m-icon-dialog:before, .appview.e-m-windows #Button .e-m-icon-button:before, .appview.e-m-windows #AutoComplete .e-m-icon-autocomplete:before,.appview.e-m-windows #AngularJS .e-m-icon-angularjs:before,.appview.e-m-windows #Knockout .e-m-icon-knockout:before
+{
+    left: 0px;
+    top: 29px;
+}
+
+.appview.e-m-windows #Chart .e-m-icon-chart:before, .appview.e-m-windows #RangeNavigator .e-m-icon-rangenavigator:before, .appview.e-m-windows #RadialGauge .e-m-icon-radialgauge:before, .appview.e-m-windows #LinearGauge .e-m-icon-lineargauge:before, .appview.e-m-windows #DigitalGauge .e-m-icon-digitalgauge:before, .appview.e-m-windows #BulletGraph .e-m-icon-bulletgraph:before, .appview.e-m-windows #Autocomplete .e-m-icon-autocomplete:before, .appview.e-m-windows #Map .e-m-icon-map:before, .appview.e-m-windows #TreeMap .e-m-icon-treemap:before, .appview.e-m-windows #Barcode .e-m-icon-barcode:before
+{
+    left: 0px;
+    top: 29px;
+    font-size: 50px;
+}
+
+.appview.e-m-windows #DatePicker .e-m-icon-datepicker:before
+{    
+    top: 25px;
+}
+
+.appview.e-m-windows #Tab .e-m-icon-tab:before
+{
+    left: 0px;
+    top: 29px;
+    font-size: 65px;
+}
+
+.appview.e-m-windows #Menu .e-m-icon-menu:before
+{
+    left: 9px;
+    top: 25px;
+    font-size: 58px;
+}
+
+.appview.e-m-windows #ListView .e-m-icon-listview:before
+{
+    left: 5px;
+    top: 25px;
+}
+
+.appview.e-m-windows #Grid .e-m-icon-grid:before
+{
+    left: 0px;
+    top: 29px;
+    font-size: 50px;
+}
+/*Settings page icon*/
+
+#apisettings .settingsapi
+{
+    height: 45px;
+    width: 45px;
+}
+
+#apisettingsnav .settingsapinav:before
+{
+    content: "\e735";
+    color: #007AFF;
+    font-family: ejmmobilefonts;
+    font-size: 35px;
+    position: relative;
+    top: 4px;
+}
+
+.e-m-android #apisettingsnav .settingsapinav:before
+{
+    color: rgb(34, 34, 34);
+}
+
+.e-m-windows #apisettings, #aboutpageicon .aboutpageicon
+{
+    top: 9px;
+    right: 25px;
+}
+
+.e-m-windows #apisettings .settingsapi
+{
+    background: url("sample/settings.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+
+.appview.e-m-windows .triangleopen
+{
+    position: absolute;
+    display: none;
+    right: 32px;
+    top: 60px;
+    border-left: 15px solid rgba(0, 0, 0, 0);
+    border-right: 15px solid rgba(0, 0, 0, 0);
+    border-top: 15px solid #1196CD;
+    height: 0;
+    width: 0;
+}
+
+#apisettings, #apisettingsnav, #stocknav , #aboutpageicon
+{
+    float: right;
+    height: 45px;
+    position: absolute;
+    width: 45px;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+#apisettingsnav, #stocknav
+{
+    right: 0;
+    display: none;
+}
+
+.e-m-ios7 #apisettings .settingsapi:before
+{
+    content: "\e6f8";
+    color: #007AFF;
+    font-size: 75px;
+    left: -17px;
+    top: -15px;
+}
+
+.e-m-android #apisettings .settingsapi
+{
+    background: url("sample/androidsettings.png") no-repeat scroll center center;
+}
+
+table.settingstable
+{
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+}
+/*Text color for all controls tile */
+.showcase.e-m-ios7 .e-m-tile-wrapper-small .e-m-tile-text
+{
+    color: #4D4D4D;
+}
+
+
+/*settings page alignment*/
+#settings .sample
+{
+    padding: 0;
+    color: White;
+    text-align: justify;
+}
+
+.sample,.gridsample,.ratingsample,.textboxsample
+{
+    padding: 20px;
+}
+
+.settingstable *
+{
+    font-size: 14px;
+}
+
+#settings .container-fluid.sample td
+{
+    padding: 5px;
+}
+
+#settings .container-fluid.sample tr td:first-child
+{
+    width: 45%;
+}
+
+#settings .container-fluid.sample tr td:last-child
+{
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.e-m-windows.e-m-tablet #settings .container-fluid.sample tr td.col-padding, .e-m-ios7.e-m-tablet #settings .container-fluid.sample tr td.col-padding
+{
+    padding-left: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.e-m-ios7.e-m-tablet #settings .container-fluid.sample tr td.col-padding > div, .e-m-windows.e-m-tablet #settings .container-fluid.sample tr td.col-padding > div
+{
+    width: 135%;
+    height: 35px;
+}
+
+/*IOS7 menu alignments*/
+.appview.e-m-ios7 #settings .sample
+{
+    padding: 0px 20px 10px 20px;
+}
+
+
+.e-m-ios7 #settings #menuheader
+{
+    padding: 10px 0px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.e-m-ios7 #settings .container-fluid
+{
+    color: black;
+}
+
+
+/*Android Dialog alignments*/
+.appview.e-m-android .e-m-ajaxchild, .appview.e-m-android #settings
+{
+    color: #706E6F;
+}
+
+#settings.e-m-android.e-m-dialog .e-m-dlg.e-m-dlg-alert
+{
+    width: 50%;
+}
+
+.e-m-android #settings .container-fluid.sample
+{
+    padding: 10px;
+    margin-top: 0;
+}
+
+.e-m-android.appview #settingscontent td
+{
+    color: #454545;
+    text-shadow: none;
+}
+
+.e-m-android.appview .bottomnav [class*="e-m-icon-"]:before
+{
+    left: 0px;
+    top: 22px;
+}
+
+.e-m-android.appview #Button .e-m-icon-button:before, .e-m-android.appview #DatePicker .e-m-icon-datepicker:before, .e-m-android.appview #ListView .e-m-icon-listview:before, .e-m-android.appview #Rating .e-m-icon-rating:before, .e-m-android.appview #Slider .e-m-icon-slider:before, .e-m-android.appview #Tab .e-m-icon-tab:before, .e-m-android.appview #Textbox .e-m-icon-textbox:before, .e-m-android.appview #TileView .e-m-icon-tileview:before, .e-m-android.appview #TimePicker .e-m-icon-timepicker:before, .e-m-android.appview #ToolBar .e-m-icon-toolbar:before, .e-m-android.appview #RangeNavigator .e-m-icon-rangenavigator:before
+{
+    left: 2px;
+    top: 22px;
+}
+
+.e-m-android.appview #Rotator .e-m-icon-rotator:before
+{
+	left: -0.5px;
+    top: 22px;
+}
+
+.e-m-android.appview #Accordion .e-m-icon-accordion:before,.e-m-android.appview #Autocomplete .e-m-icon-autocomplete:before,.e-m-android.appview #Dialog .e-m-icon-dialog:before,.e-m-android.appview #ListView .e-m-icon-listview:before,.e-m-android.appview #Menu .e-m-icon-menu:before
+{
+	left: 2px;
+    top: 22px;
+}
+
+.e-m-android.appview #ToolBar .e-m-icon-toolbar:before
+{    
+    left: 6px;
+}
+
+.e-m-android.appview #Grid .e-m-icon-grid:before
+{
+    left: -1px;
+    top: 21px;
+}
+
+/*Windows menu alignments*/
+.appview.e-m-windows .e-m-ajaxchild, .appview.e-m-windows #settings
+{
+    color: #999999;
+}
+
+.e-m-windows #settings
+{
+    margin-top: 15px;
+    background: transparent;
+}
+
+.e-m-windows #settings #menuheader
+{
+    color: #000000;
+    padding-left: 10px;
+    font-size: 22px;
+}
+
+.e-m-windows #settings .container-fluid.sample tr:last-child
+{
+    border-bottom: 0;
+}
+
+.e-m-windows #settings .container-fluid.sample td.col-padding
+{
+    border-bottom-color: #b9b9b9;
+}
+
+.e-m-windows.e-m-tablet #settings .container-fluid.sample tr td.col-padding > div:first-child
+{
+    margin-top: 0px;
+}
+
+.e-m-windows.e-m-tablet #settings .container-fluid.sample tr td.col-padding > div
+{
+    margin-top: 10px;
+}
+
+.e-m-windows.e-m-tablet #settings .container-fluid.sample tr td:last-child
+{
+    padding: 4px;
+}
+
+.e-m-windows #settings .container-fluid.sample
+{
+    color: #424242;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 295px;
+}
+
+#settings.e-m-menu.e-m-windows
+{
+    width: 320px;
+}
+
+.e-m-windows #settings .e-m-menu-container
+{
+    border-color: #000000;
+}
+
+/* windows Tile customization */
+.appview.e-m-windows #samplestile
+{
+    width: 750px;
+    float: left;
+}
+
+.appview #controlstile
+{
+    display: inline-block;
+}
+
+.appview.e-m-windows .bottomnav .e-m-tile-wrapper.e-m-tile
+{
+    background: #86BA35;
+}
+
+/* windows header customization */
+#windowsheader .e-m-btn-back.e-m-btnwrapper, #windowssampleheader .e-m-btn-back.e-m-btnwrapper
+{
+    float: left;
+    margin: 11px 2px 0 15px;
+}
+
+#windowsheader .wintitle, #windowssampleheader .wintitle
+{
+    margin-left: 17px;
+}
+
+.showcase #windowsheader .wintitle, .showcase #windowssampleheader .wintitle
+{
+    margin-left: 58px;
+}
+
+.appview.e-m-ios7 #androidheader, .appview.e-m-windows #androidheader, .appview.e-m-android #showcaseheader, .appview.e-m-windows #showcaseheader
+{
+    display: none;
+}
+
+#windowsheader, #windowssampleheader
+{
+    background: #1196cd;
+    text-shadow: none;
+    color: #ffffff;
+}
+
+#windowsheader .wintitle span, #windowssampleheader .wintitle span
+{
+    color: #ffffff;
+    display: block;
+}
+
+.appview.e-m-windows .winlargefont
+{
+    font-size: 35px;
+    line-height: 30px;
+}
+
+.appview.e-m-windows .wintitle
+{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.appview.e-m-windows .heading1
+{
+    margin: 20px 70px 12px;
+}
+
+.appview.e-m-windows .leftpadding
+{
+    padding: 0px;
+}
+
+.appview.e-m-windows #controlsgrid
+{
+    margin-left: 55px;
+    padding: 0px;
+}
+
+/*Splitpane, Tab*/
+#splitview.e-m-splitpane.e-m-ios7 .e-m-sp-rightwrapper, .appview.e-m-ios7 #tabitem_wrapper.e-m-tab-content .e-m-content, #splitview.e-m-splitpane.e-m-android .e-m-sp-rightwrapper, .appview.e-m-android #tabitem_wrapper.e-m-tab-content .e-m-content
+{
+    padding: 0;
+}
+
+.appview.e-m-ios7 #controlsgrid.group .column .e-m-tile-wrapper-small
+{
+    margin: 20px;
+}
+
+
+.e-m-ios7.appview #topnavwrapper, .e-m-android.appview #topnavwrapper
+{
+    padding-left: 4%;
+}
+
+.e-m-tile.e-m-tile-wrapper.e-m-ios7
+{
+    border-radius: 15px;
+}
+
+#showcasetabwrapper .e-m-tile.e-m-tile-wrapper.e-m-ios7
+{
+    margin: 10px;
+}
+
+.e-m-tile.e-m-tile-wrapper.e-m-tile-wrapper-medium.e-m-ios7 .e-m-tile-text
+{
+    bottom: 0;
+    font-size: 12px;
+}
+/*Toolbar*/
+#toolbarappview #default_rightscroller > div
+{
+    height: 100%;
+}
+.e-m-windows .e-m-header-text.e-m-light.e-m-user-select
+{
+    margin-left: 10px;
+}
+#abouttab
+{
+    display: none;
+}
+.e-m-windows .e-m-splitpane .e-m-sp-rightwrapper
+{
+    padding: 0;
+}
+.aboutpageicon:before {
+    font-size: 86px;
+    left: -33px;
+    top: 21px;
+    color:#9c9c9c !important;
+    height: 45px;
+    width: 45px;
+}
+.e-m-windows.e-m-header .aboutpageicon:before {
+    color:#eeeeee !important;
+}
+.e-m-android.e-m-tb .aboutpageicon:before {
+    color:#343434 !important;
+}
+#aboutcontent
+{
+    padding:10px;
+}
+.e-m-windows #aboutpageicon {
+    top: 7px;
+    right: 15px;
+}
+.e-m-windows .aboutpageicon:before, #aboutpageicon {
+    height: 60px;
+}
+#aboutmenu.e-m-menu.e-m-ios7.e-m-menu-normal,
+#yearMenu.e-m-menu.e-m-ios7.e-m-menu-normal
+{
+	bottom: 0;
+}

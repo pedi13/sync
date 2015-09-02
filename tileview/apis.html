@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile - TileView - API's</title>
+    <link rel="stylesheet" href="../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../themes/responsive.css" />
+    <link rel="stylesheet" href="../themes/ej.showcase.min.css" />
+    <script type="text/javascript" src="../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/support.js"></script>
+    <script type="text/javascript" src="../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/samplebrowser.js"></script>
+</head>
+<body>
+    <div class="sample tileapi">
+        <div id="tile" data-role="ejmtile" data-ej-tilesize="medium" data-ej-badge-value="10"
+            data-ej-badge-enabled="true" data-ej-imageposition="fill" data-ej-imagepath="../themes/sample/tileview"
+            data-ej-imageurl="setting.png" data-ej-ios7-textposition="outer" data-ej-text="Settings">
+        </div>
+    </div>
+    <div id="settings" data-url = "settingspage">
+    </div>
+    <div id="apidialog">
+    </div>
+    <div id="apitoolbar" data-role="ejmtoolbar" data-ej-touchend="showsettings">
+        <ul>
+            <li data-ej-iconname="settings"></li>
+        </ul>
+    </div>
+    <script id="template" type="text/x-jsrender">
+        <div class="container-fluid sample">
+            <table class="settingstable">
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Change Badge Value
+                    </td>
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        <div>
+                            <div id="tileapislider" data-role="ejmslider" data-ej-ios7-thumbstyle="small" data-ej-value=10 data-ej-minvalue=1 data-ej-slide="updateBadge" />
+                            </div>
+                    </td>
+                    <td class="col-md-3" id='tilebatch'>10</td>
+                </tr>
+                </tr>
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Show Badge
+                    </td>
+                    <td class="col-md-3">
+                        <div data-role="ejmtogglebutton" data-ej-change="checkShowHideBadge" />
+                    </td>
+                </tr>
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Show Tile Text
+                    </td>
+                    <td class="col-md-3">
+                        <div data-role="ejmtogglebutton" data-ej-change="checkShowHideIconText" />
+                    </td>
+                </tr>
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Change Tile Size
+                    </td>
+                    <td class="col-md-3 col-padding">
+                        <div>
+                            <input id="small" name="tileSize" data-ej-text="Small" type="radio" data-role="ejmradiobutton" data-ej-touchend="onSelectSetTileSize"
+                                   value="small" />
+                        </div>
+                        <div>
+                            <input id="medium" name="tileSize" data-ej-text="Medium" type="radio" data-role="ejmradiobutton" data-ej-touchend="onSelectSetTileSize"
+                                   value="medium" data-ej-checked=true />
+                        </div>
+                        <div>
+                            <input id="large" name="tileSize" data-ej-text="Large" type="radio" data-role="ejmradiobutton" data-ej-touchend="onSelectSetTileSize"
+                                   value="large" />
+                        </div>
+                        <div>
+                            <input id="wide" name="tileSize" data-ej-text="Wide" type="radio" data-role="ejmradiobutton" data-ej-touchend="onSelectSetTileSize"
+                                   value="wide" />
+                        </div>
+                    </td>
+                </tr>
+                <!--new item  -->
+
+            </table>
+        </div>
+    </script>
+    <script id="tablettemplate" type="text/x-jsrender">
+        <div class="container-fluid sample">
+            <table class="settingstable">
+                <tr class="row-fluid">
+                    <td class="col-md-3 tilesettingsbadge">
+                        Change Badge Value
+                    </td>
+                <tr class="row-fluid">
+                    <td class="col-md-3 .tilesettingsslider">
+                        <div>
+                            <div id="tileapislider" data-role="ejmslider" data-ej-ios7-thumbstyle="small" data-ej-minvalue=1 data-ej-value =10 data-ej-slide="updateBadge" />
+                    <td class="col-md-3" id='tilebatch'>10</td>
+                    </td>
+                </tr>
+                </tr>
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Show Badge
+                    </td>
+                    <td class="col-md-3">
+                        <div data-role="ejmtogglebutton" data-ej-change="checkShowHideBadge" />
+                    </td>
+                </tr>
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Show Tile Text
+                    </td>
+                    <td class="col-md-3">
+                        <div data-role="ejmtogglebutton" data-ej-change="checkShowHideIconText" />
+                    </td>
+                </tr>
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Change Tile Size
+                    </td>
+                </tr>
+                <tr class="row-fluid">
+                    <td class="col-md-3 col-padding">
+                        <div>
+                            <input id="small" name="tileSize" data-ej-text="Small" type="radio" data-role="ejmradiobutton" data-ej-touchend="onSelectSetTileSize"
+                                   value="small" />
+                        </div>
+                        <div style="padding-top:8px">
+                            <input id="medium" name="tileSize" data-ej-text="Medium" type="radio" data-role="ejmradiobutton" data-ej-touchend="onSelectSetTileSize"
+                                   value="medium" data-ej-checked=true />
+                        </div>
+                        <div style="padding-top:8px">
+                            <input id="large" name="tileSize" data-ej-text="Large" type="radio" data-role="ejmradiobutton" data-ej-touchend="onSelectSetTileSize"
+                                   value="large" />
+                        </div>
+                        <div style="padding-top:8px">
+                            <input id="wide" name="tileSize" data-ej-text="Wide" type="radio" data-role="ejmradiobutton" data-ej-touchend="onSelectSetTileSize"
+                                   value="wide" />
+                        </div>
+                    </td>
+                </tr>
+                <!--new item  -->
+
+            </table>
+        </div>
+    </script>
+    <script type="text/javascript">
+        if (ej.isWindows() || ej.isFlat()) {
+            $($('.sample').find('div[data-role="ejmtile"]')).attr({ 'data-ej-text': 'People', 'data-ej-theme': 'dark' });
+        }
+        if (ej.getRenderMode() == "android") {
+            $($('.sample').find('div[data-role="ejmtile"]')).attr({ 'data-ej-imageurl': 'api.png', 'data-ej-backgroundcolor': '#1c80f3', 'data-ej-android-textposition': 'inner' });
+        }
+        function updateBadge(args) {
+            if ($('#tile').ejmTile('model.badge.enabled'))
+                $("#tile").ejmTile("model.badge.value", args.value);
+            $("#tilebatch").html(args.value);
+        }
+        function checkShowHideBadge(args) {
+            if (args.state) {
+                $("#tile").ejmTile("model.badge.enabled", true);
+                $("#tile").ejmTile("model.badge.value", $('#tileapislider').ejmSlider('model.value'));
+            }
+            else
+                $("#tile").ejmTile("model.badge.enabled", false);
+        }
+        function checkShowHideIconText(args) {
+            if (args.state)
+                $("#tile").ejmTile("model.showText", true);
+            else
+                $("#tile").ejmTile("model.showText", false);
+        }
+        function onSelectSetTileSize(args) {
+            $("#tile").ejmTile("model.tileSize", args.value);
+        }
+    </script>
+</body>
+</html>

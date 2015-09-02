@@ -1,0 +1,159 @@
+﻿<html>
+<head>
+    <meta name="viewport" tempcontent="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" tempcontent="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" tempcontent="yes" />
+    <meta name="description" tempcontent="syncfusion" />
+    <meta name="author" tempcontent="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile - Navigation Drawer - Default</title>
+    <link rel="stylesheet" href="../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../themes/responsive.css" />
+    <link rel="stylesheet" href="../themes/ej.showcase.min.css" />
+    <script type="text/javascript" src="../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/support.js"></script>
+    <script type="text/javascript" src="../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/samplebrowser.js"></script>
+</head>
+<body>
+    <div data-role="appview">
+        <div id="contents">
+            <div id="image1tempcontent" class="tempcontent">
+                <h2>
+                    Camera</h2>
+                <p>
+                    Most camera phones are simpler than separate digital cameras. Their usual fixed-focus
+                    lenses and smaller sensors limit their performance in poor lighting. It is then
+                    probably no surprise that the Play Store has found itself populated with numerous
+                    camera apps, designed to replace the stock camera app with something either more
+                    fun or more intuitive.
+                </p>
+            </div>
+            <div id="image2tempcontent" class="tempcontent">
+                <h2>
+                    Music</h2>
+                <p>
+                    Mobile music downloaded or streamed to mobile phones and played by mobile phones.
+                    Although many phones play music as ringtones, true "music phones" generally allow
+                    users to stream music or download music files over the internet via a WiFI connection
+                    or 3G cell phone connection. Music phones are also able to import audio files from
+                    their PCs.
+                </p>
+            </div>
+            <div id="image3tempcontent" class="tempcontent">
+                <h2>
+                    News</h2>
+                <p>
+                    Now you can read the leading Newspapers on your mobile! Mobile New Application supports
+                    almost all the GPRS enabled handsets. The basic GPRS connections support the viewing
+                    of your favorite newspaper in your own language on your mobile.
+                </p>
+            </div>
+            <div id="image4tempcontent" class="tempcontent">
+                <h2>
+                    Contacts</h2>
+                <p>
+                    Contacts App helps you to store your phone, e-mail contacts. You can retrieve or
+                    transfer your contacts onto any type of phone in minutes. Using this App, you can
+                    also Manage your contacts online.
+                </p>
+            </div>
+            <div id="image5tempcontent" class="tempcontent">
+                <h2>
+                    Mail</h2>
+                <p>
+                    The Mail Application includes all important features and puts them at your fingertips.
+                    You can read and write messages, look through and add contacts and much more in
+                    our easy-to-use app. It gives you quick mobile access to all your emails, contacts
+                    and folders.
+                </p>
+            </div>
+        </div>
+        <style>
+            .tempimage
+            {
+                height: 65px;
+                width: 75px;
+                background-attachment: scroll;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 40px auto;
+                padding: 5px;
+            }
+            .tempcontent
+            {
+                padding: 0 25px;
+            }
+            p
+            {
+                text-indent: 1em;
+                text-align: justify;
+            }
+            h1.title, .tempcontent > h2
+            {
+                font-size: 20px;
+                text-align: center;
+                font-weight: bold;
+            }
+            .appview.e-m-flat h1.title
+            {
+                color: black;
+            }
+        </style>
+        <div data-role="ejmnavigationdrawer" data-ej-targetid="tempswipe" id="tempnavpane"
+            data-ej-position="fixed" data-ej-type="overlay" data-ej-allowscrolling="true"
+            data-ej-scrollsettings-autoadjustheight="true" data-ej-scrollsettings-adjustfixedposition="true">
+            <h1 class="title">
+                Apps
+            </h1>
+            <div id="image1" class="tempimage e-m-state-active" style="background-image: url('../themes/sample/navigationdrawer/Camera.png');">
+            </div>
+            <div id="image2" class="tempimage" style="background-image: url('../themes/sample/navigationdrawer/Headphone.png');">
+            </div>
+            <div id="image3" class="tempimage" style="background-image: url('../themes/sample/navigationdrawer/News.png');">
+            </div>
+            <div id="image4" class="tempimage" style="background-image: url('../themes/sample/navigationdrawer/Photograph.png');">
+            </div>
+            <div id="image5" class="tempimage" style="background-image: url('../themes/sample/navigationdrawer/Mail.png');">
+            </div>
+        </div>
+        <div id="tempswipe" class="swipebutton">
+        </div>
+        <script>
+            $(".tempcontent").hide();
+            $("#image1tempcontent").show();
+            $(".tempimage").bind("click", function (e) {
+                var tempid = e.target.id;
+                $("#tempnavpane").ejmNavigationDrawer("close");
+                $(".tempcontent").hide();
+                $('.tempimage').removeClass("e-m-state-active");
+                $('#' + tempid).addClass("e-m-state-active");
+                $('#' + tempid + 'tempcontent').show();
+            });
+        </script>
+    </div>
+</body>
+</html>

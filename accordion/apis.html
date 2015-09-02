@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile - Accordion - API's</title>
+    <link rel="stylesheet" href="../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../themes/responsive.css" />
+    <link rel="stylesheet" href="../themes/ej.showcase.min.css" />
+    <script type="text/javascript" src="../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/support.js"></script>
+    <script type="text/javascript" src="../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/samplebrowser.js"></script>
+</head>
+<body>
+    <div id="accordion" class="sample">
+        <div id="infoMessage" style="color: red; text-align: center">
+        </div>
+        <div id="apiaccordion" data-role="ejmaccordion">
+            <ul>
+                <li data-ej-text="Grid Web">
+                    <div>
+                        Work with ASP.NET AJAX's UpdatePanel. Essential Grid provides built-in support for
+                        hierarchical viewing, grouping, multicolumn sorting, filtering, summaries, and various
+                        data editors.
+                    </div>
+                </li>
+                <li data-ej-text="Diagram Web">
+                    <div>
+                        Essential Diagram is an extensible, high-performance .NET diagramming framework
+                        for ASP.NET applications.
+                    </div>
+                </li>
+                <li data-ej-text="DocIO Web">
+                    <div>
+                        Essential DOCIO is a .NET library that can read, write, and modify Microsoft Word
+                        files.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="settings" data-url = "settingspage">
+    </div>
+    <div id="apidialog">
+    </div>
+    <div id="apitoolbar" data-role="ejmtoolbar" data-ej-touchend="showsettings">
+        <ul>
+            <li data-ej-iconname="settings"></li>
+        </ul>
+    </div>
+    <script id="template" type="text/x-jsrender">
+        <div class="container-fluid sample">
+            <table class="settingstable">
+				 <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Active Index
+                    </td>
+                    <td class="col-md-3 col-padding">
+					<div>
+					 <input name="active" id="grid" data-ej-text="Grid Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectActiveIndex"
+                            value="Item1" /></div><div>
+                        <input name="active" id="diagram" data-ej-text="Diagram Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectActiveIndex"
+                            value="Item2" /></div><div>
+                        <input name="active" id="docio" data-ej-text="DocIO Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectActiveIndex"
+                            value="Item3" /></div>
+                    </td>
+                </tr>
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Enable Item
+                    </td>
+                    <td class="col-md-3 col-padding"><div>
+                        <input name="accordionAPI" id="egrid" data-ej-text="Grid Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectEnableItem"
+                            value="Item1"/></div><div>
+                        <input name="accordionAPI" id="ediagram" data-ej-text="Diagram Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectEnableItem"
+                            value="Item2" /></div><div>
+                        <input name="accordionAPI" id="edocio" data-ej-text="DocIO Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectEnableItem"
+                            value="Item3" /></div>
+                    </td>
+                </tr>
+				<tr class="row-fluid">
+                    <td class="col-md-3">
+                        Disable Item
+                    </td>
+                    <td class="col-md-3 col-padding"><div>
+                        <input name="accordionAPI" id="dgrid" data-ej-text="Grid Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectDisableItem"
+                            value="Item1"/></div>
+							<div>
+                        <input name="accordionAPI" id="ddiagram" data-ej-text="Diagram Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectDisableItem"
+                            value="Item2" /></div><div>
+                        <input name="accordionAPI" id="ddocio" data-ej-text="DocIO Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectDisableItem"
+                            value="Item3" /></div>
+                    </td>
+                </tr>
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Enable All
+                    </td>
+                    <td class="col-md-3" style="padding-left:15px;padding-bottom:7px;padding-top:7px;">
+                        <div id="statechange" data-role="ejmtogglebutton"  data-ej-change="checkEnableDisable"/>
+                    </td>
+                </tr>
+				<tr class="row-fluid">
+                    <td class="col-md-3">
+                        Show
+                    </td>
+                    <td class="col-md-3" style="padding-left:15px; padding-bottom:7px;padding-top:7px;">
+                        <div data-role="ejmtogglebutton"  data-ej-change="checkShowHide"/>
+                    </td>
+                </tr>
+				<!--new item  --> 
+			
+            </table>
+        </div>
+    </script>
+    <script id="tablettemplate" type="text/x-jsrender">
+        <div class="container-fluid sample">
+            <table class="settingstable">
+				 <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Active Index
+                    </td>
+				</tr>
+				 <tr class="row-fluid">
+                    <td class="col-md-3 col-padding">
+					<div>
+					 <input name="active" id="grid" data-ej-text="Grid Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectActiveIndex"
+                            value="Item1" /></div><div>
+                        <input name="active" id="diagram" data-ej-text="Diagram Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectActiveIndex"
+                            value="Item2" /></div><div>
+                        <input name="active" id="docio" data-ej-text="DocIO Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectActiveIndex"
+                            value="Item3" /></div>
+                    </td>
+                </tr>
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Enable Item
+                    </td>
+					</tr>
+				 <tr class="row-fluid">
+                    <td class="col-md-3 col-padding"><div>
+                        <input name="accordionAPI" id="egrid" data-ej-text="Grid Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectEnableItem"
+                            value="Item1"/></div><div>
+                        <input name="accordionAPI" id="ediagram" data-ej-text="Diagram Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectEnableItem"
+                            value="Item2" /></div><div>
+                        <input name="accordionAPI" id="edocio" data-ej-text="DocIO Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectEnableItem"
+                            value="Item3" /></div>
+                    </td>
+                </tr>
+				<tr class="row-fluid">
+                    <td class="col-md-3">
+                        Disable Item
+                    </td>
+					</tr>
+				 <tr class="row-fluid">
+                    <td class="col-md-3 col-padding"><div>
+                        <input name="accordionAPI" id="dgrid" data-ej-text="Grid Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectDisableItem"
+                            value="Item1"/></div><div>
+                        <input name="accordionAPI" id="ddiagram" data-ej-text="Diagram Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectDisableItem"
+                            value="Item2" /></div><div>
+                        <input name="accordionAPI" id="ddocio" data-ej-text="DocIO Web" type="radio" data-role="ejmradiobutton"  data-ej-touchend="onSelectDisableItem"
+                            value="Item3" /></div>
+                    </td>
+                </tr>
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Enable All
+                    </td>
+                    <td class="col-md-3" style="padding-left:15px;">
+                        <div data-role="ejmtogglebutton"  data-ej-change="checkEnableDisable"/>
+                    </td>
+                </tr>
+				<tr class="row-fluid">
+                    <td class="col-md-3">
+                        Show
+                    </td>
+                    <td class="col-md-3" style="padding-left:15px;">
+                        <div data-role="ejmtogglebutton"  data-ej-change="checkShowHide"/>
+                    </td>
+                </tr>
+				<!--new item  --> 
+			
+            </table>
+        </div>
+    </script>
+    <script type="text/javascript">
+        function onSelectActiveIndex(args) {
+            if (args.value == "Item1")
+                $("#apiaccordion").ejmAccordion({ selectedItems: [0] });
+            else if (args.value == "Item2")
+                $("#apiaccordion").ejmAccordion({ selectedItems: [1] });
+            else
+                $("#apiaccordion").ejmAccordion({ selectedItems: [2] });
+        }
+
+        function onSelectEnableItem(args) {
+            if (args.value == "Item1") {
+                $("#apiaccordion").ejmAccordion("enableItems", 0);
+                if (!$("#statechange").ejmToggleButton("option", "toggleState")) {
+                    setstates();
+                    $("#apiaccordion").ejmAccordion("disableItems", [1, 2]);
+                    $("#apiaccordion").ejmAccordion({ selectedItems: [0] });
+                }
+            }
+            else if (args.value == "Item2") {
+                $("#apiaccordion").ejmAccordion("enableItems", 1);
+                if (!$("#statechange").ejmToggleButton("option", "toggleState")) {
+                    setstates();
+                    $("#apiaccordion").ejmAccordion("disableItems", [0, 2]);
+                    $("#apiaccordion").ejmAccordion({ selectedItems: [1] });
+                }
+            }
+            else {
+                $("#apiaccordion").ejmAccordion("enableItems", 2);
+                if (!$("#statechange").ejmToggleButton("option", "toggleState")) {
+                    setstates();
+                    $("#apiaccordion").ejmAccordion("disableItems", [0, 1]);
+                    $("#apiaccordion").ejmAccordion({ selectedItems: [2] });
+                }
+            }
+        }
+
+        function setstates() {
+            $("#apiaccordion").ejmAccordion("enableItems", [0, 1, 2]);
+            $("#apiaccordion").ejmAccordion("collapseAll");
+        }
+
+        function onSelectDisableItem(args) {
+            $("#apiaccordion").ejmAccordion("enableItems", [0, 1, 2]);
+            if (args.value == "Item1") {
+                $("#apiaccordion").ejmAccordion("disableItems", 0);
+                $("#apiaccordion").ejmAccordion("enableItems", [1, 2]);
+            }
+            else if (args.value == "Item2") {
+                $("#apiaccordion").ejmAccordion("disableItems", 1);
+                $("#apiaccordion").ejmAccordion("enableItems", [0, 2]);
+            }
+            else {
+                $("#apiaccordion").ejmAccordion("disableItems", 2);
+                $("#apiaccordion").ejmAccordion("enableItems", [0, 1]);
+            }
+        }
+
+        function checkEnableDisable(args) {
+            if (args.state)
+                $("#apiaccordion").ejmAccordion("enableItems", [0, 1, 2]);
+            else
+                $("#apiaccordion").ejmAccordion("disableItems", [0, 1, 2]);
+        }
+
+        function checkShowHide(args) {
+            if (args.state) {
+                $("#apiaccordion").ejmAccordion("show");
+                $("#infoMessage").html("");
+            }
+            else {
+                $("#apiaccordion").ejmAccordion("hide");
+                $("#infoMessage").html("Hide state is enabled");
+            }
+        }
+    </script>
+</body>
+</html>

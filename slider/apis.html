@@ -1,0 +1,124 @@
+﻿<!doctype html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile - Slider - API's</title>
+    <link rel="stylesheet" href="../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../themes/responsive.css" />
+    <link rel="stylesheet" href="../themes/ej.showcase.min.css" />
+    <script type="text/javascript" src="../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/support.js"></script>
+    <script type="text/javascript" src="../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/samplebrowser.js"></script>
+</head>
+<html lang="en">
+<body>
+    <div id="settings" data-url = "settingspage">
+    </div>
+    <div id="apidialog">
+    </div>
+    <div id="apitoolbar" data-role="ejmtoolbar" data-ej-touchend="showsettings">
+        <ul>
+            <li data-ej-iconname="settings"></li>
+        </ul>
+    </div>
+    <script id="template" type="text/x-jsrender">
+        <div class="container-fluid sample">
+            <table class="settingstable">
+				 <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Enable
+                    </td>
+                    <td class="col-md-3 sliderapitoggle">
+                     <div id="state" data-role="ejmtogglebutton"  data-ej-change="change"></div>
+                    </td>
+                 </tr>		
+                 <tr class="row-fluid">
+                    <td class="col-md-3">
+                        <input id="value" data-role="ejmbutton" type="button" data-ej-text="Get Value" data-ej-touchend="getvalue"/>
+                    </td>
+                    <td class="col-md-3 sliderapispan">
+					         <span id="getval"></span>             
+                    </td>
+                </tr>	
+            </table>
+        </div>
+    </script>
+    <script id="tablettemplate" type="text/x-jsrender">
+        <div class="container-fluid sample">
+            <table class="settingstable">
+				 <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Enable
+                    </td>
+                    <td class="col-md-3 sliderapitoggle">
+                     <div id="state" data-role="ejmtogglebutton"  data-ej-change="change"></div>
+                    </td>
+                 </tr>		
+                 <tr class="row-fluid">
+                    <td class="col-md-3">
+                        <input id="value" data-role="ejmbutton" type="button" data-ej-text="Get Value" data-ej-touchend="getvalue"/>
+                    </td>
+                    <td class="col-md-3 sliderapispan">
+					         <span id="getval"></span>             
+                    </td>
+                </tr>	
+            </table>
+        </div>
+    </script>
+    <script>
+        function change(args) {
+            if (args.state) {
+                App.activePage.find("#apislider").ejmSlider("model.enabled", true);
+            }
+            else {
+                App.activePage.find("#apislider").ejmSlider("model.enabled", false);
+            }
+        }
+        function getvalue() {
+            if (ej.isMobile())
+                App.activeSubPage.find('#getval').html(App.activePage.find("#apislider").ejmSlider("getValue"));
+            else
+                App.activePage.find('#getval').html(App.activePage.find("#apislider").ejmSlider("getValue"));
+        }
+    </script>
+    <div class='sample'>
+        <div class="sb-slidersample">
+            <div class="sb-header">
+                SLIDER-API</div>
+            <br />
+            <div class="sb-slidercontent">
+                <div id="apislider" data-role="ejmslider" data-ej-value="50">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

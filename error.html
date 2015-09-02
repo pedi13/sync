@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" class="e-m-user-select">
+<head>
+    <title>Essential Studio for JavaScript Mobile</title>
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <link rel="stylesheet" href="themes/bootstrap.css" />
+    <link rel="stylesheet" href="themes/samplebrowser.css" />
+    <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+    <style>
+        #support
+        {
+            background-image: url(themes/sample/excumatory.png);
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+        
+        body, html
+        {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #text
+        {
+            color: black;
+            float: none;
+            font-size: 21px;
+            height: 50px;
+            position: relative;
+            text-align: center;
+            color: #b3b3b3;
+            font-size: 21px;
+        }
+        
+        #textwrapper
+        {
+            height: 101px;
+            margin: 0 auto;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="support" style="height: 190px; margin-top: 120px; float: none">
+        </div>
+        <div id="textwrapper" style="height: 100px; margin: 0 auto;">
+            <p id="text">
+                Mobile controls are only supported
+                <br />
+                <br />
+                from Internet Explorer Versioned 9 and above.
+            </p>
+        </div>
+    </div>
+    <script>
+        //To Navigate to other product
+        $("#Res-prodnav").on("click", function () {
+            $(".product-naviation").removeClass("hideIt");
+        });
+        $(document).click(function (e) {
+            if (!$(e.target).hasClass("productnav"))
+                $(".product-naviation").addClass("hideIt");
+        });
+        $(document).delegate(".products", "click", function (e) {
+            viewdemo(e.target.innerHTML);
+        });
+        function viewdemo(product) {
+            product = product.toLowerCase();
+            if (location.protocol == "file:" || location.port == "") {
+                if (product == "mobile") return; else window.location.href = window.essentialJsUrl;
+            }
+            else {
+                var text = 'StartDevServer.ashx', prot = window.location.protocol, hostname = window.location.host;
+                if (product == "mobile") return; else product = "web";
+                $.ajax({
+                    url: prot + "//" + hostname + "/" + text + "?product=" + product,
+                    success: function (data) {
+                        window.location = data;
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

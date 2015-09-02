@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile - Chart - Pyramid Chart</title>
+    <link rel="stylesheet" href="../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../themes/responsive.css" />
+    <link rel="stylesheet" href="../themes/ej.showcase.min.css" />
+    <script type="text/javascript" src="../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/support.js"></script>
+    <script type="text/javascript" src="../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/samplebrowser.js"></script>
+</head>
+<body>
+    <div style="height: inherit">
+        <div id="container_pyramid" data-role="ejmchart" style="height: inherit">
+        </div>
+    </div>
+    <script>
+        function ChartLoad() {
+            $("#container_pyramid").ejChart(
+                     {
+                         series: [{
+                             points: [{ x: 'India', y: 20, text: '8%' },
+                               { x: 'Japan', y: 25, text: '10%' },
+                           { x: 'Australia', y: 20, text: '20%' },
+                            { x: 'USA', y: 24, text: '15%' },
+                           { x: 'China', y: 23, text: '23%' }
+                             ],
+                             marker: {
+                                 dataLabel: {
+                                     visible: true,
+                                     font: { color: 'white', size: '12px' }
+                                 }
+                             },
+                             name: 'Newyork', type: 'pyramid', labelPosition: 'inside'
+
+                         }
+                         ],
+                         canResize: true,
+                         load: 'onchartload',
+                         title: { text: 'Sales Distribution of Car', font: { size: '13px' } },
+                         legend: { visible: false }
+                     });
+        }
+        function onchartload(sender) {
+           if (window.theme) {
+                if (window.theme[1] == "light")
+                    sender.model.theme = "flatlight"
+                else
+                    sender.model.theme = "flatdark"
+            }
+            else {   
+                if (ej.isDevice()) {                            // device
+				    if (ej.isWindows() && ej.isMobile())        // windows mobile
+                       sender.model.theme = "flatdark"
+					else
+					   sender.model.theme = "flatlight"         // windows tablet
+                }
+				else if(ej.isWindows())                         // windows desktop
+                       sender.model.theme = "flatdark"
+            }
+        }
+    </script>
+</body>
+</html>

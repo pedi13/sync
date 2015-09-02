@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile - Tab - API's</title>
+    <link rel="stylesheet" href="../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../themes/responsive.css" />
+    <link rel="stylesheet" href="../themes/ej.showcase.min.css" />
+    <script type="text/javascript" src="../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/support.js"></script>
+    <script type="text/javascript" src="../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/samplebrowser.js"></script>
+</head>
+<body>
+    <div data-role="ejmlistview" data-ej-allowscrolling="false" data-ej-showheader="false"
+        id="api1">
+        <ul>
+            <li data-ej-text="Large Cheeseburger"></li>
+            <li data-ej-text="Blizzard "></li>
+            <li data-ej-text="Baconator "></li>
+        </ul>
+    </div>
+    <div data-role="ejmlistview" data-ej-allowscrolling="false" data-ej-showheader="false"
+        id="api2">
+        <ul>
+            <li data-ej-text="Condensed Onion Soup"></li>
+            <li data-ej-text="Beef Broth"></li>
+            <li data-ej-text="Bean Soup"></li>
+        </ul>
+    </div>
+    <div data-role="ejmlistview" data-ej-allowscrolling="false" data-ej-showheader="false"
+        id="api3">
+        <ul>
+            <li data-ej-text="Sweet Bagel Chips"></li>
+            <li data-ej-text="Cheesy Chex Mix"></li>
+            <li data-ej-text="Caramel Popcorn"></li>
+        </ul>
+    </div>
+    <div data-role="ejmlistview" data-ej-allowscrolling="false" data-ej-showheader="false"
+        id="api4">
+        <ul>
+            <li data-ej-text="Bloody Mary"></li>
+            <li data-ej-text="Soy Milk"></li>
+            <li data-ej-text="Orange Juice"></li>
+        </ul>
+    </div>
+    <div data-role="ejmtab" id="tabsamp" data-ej-android-position="normal" data-ej-windows-position="normal"
+        data-ej-flat-position="normal">
+        <ul>
+            <li data-ej-ios7-imageclass="e-m-icon-fastfoods" data-ej-href="#api1" data-ej-text='Fast Foods'>
+            </li>
+            <li data-ej-ios7-imageclass="e-m-icon-soups" data-ej-href="#api2" data-ej-text='Soups'>
+            </li>
+            <li data-ej-ios7-imageclass="e-m-icon-snacks" data-ej-href="#api3" data-ej-text='Snacks'>
+            </li>
+            <li data-ej-ios7-imageclass="e-m-icon-beverages" data-ej-href="#api4" data-ej-text='Beverages'>
+            </li>
+        </ul>
+    </div>
+    <div id="settings" data-url = "settingspage">
+    </div>
+    <div id="apidialog">
+    </div>
+    <div id="apitoolbar" data-role="ejmtoolbar" data-ej-touchend="showsettings">
+        <ul>
+            <li data-ej-iconname="settings"></li>
+        </ul>
+    </div>
+    <script id="template" type="text/x-jsrender">
+        <div class="container-fluid sample">
+           <table class="settingstable">
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Disable Tab
+                    </td>
+                    <td class="col-md-3 col-padding">
+					<div>
+                       <input id="fastfoods1" name="tabapis" data-ej-text="Fastfoods" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radiodisable"
+                            value="fastfoods" />
+					</div>
+					<div>
+                        <input id="soups1" name="tabapis" data-ej-text="Soups" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radiodisable"
+                            value="soups" />
+					</div>
+					<div>
+                        <input id="snacks1" name="tabapis" data-ej-text="Snacks" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radiodisable"
+                            value="snacks" />
+					</div>
+					<div>
+						<input id="beverages1" name="tabapis" data-ej-text="Beverages" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radiodisable"
+                            value="beverages" />
+					</div>
+                    </td>
+                </tr>
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Enable tab
+                    </td>
+                    <td class="col-md-3 col-padding">
+						<div>
+                        <input id="fastfoods2" name="tabapi" data-ej-text="Fastfoods" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radioenable"
+                            value="fastfoods" />
+						</div>
+						<div>
+                        <input id="soups2" name="tabapi" data-ej-text="Soups" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radioenable"
+                            value="soups" />
+						</div>
+						<div>
+                        <input id="snacks2" name="tabapi" data-ej-text="Snacks" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radioenable"
+                            value="snacks" />
+						</div>
+						<div>
+						<input id="beverages2" name="tabapi" data-ej-text="Beverages" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radioenable"
+                            value="beverages" />
+						</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </script>
+    <script id="tablettemplate" type="text/x-jsrender">
+        <div class="container-fluid sample">
+           <table class="settingstable">
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Disable Tab
+                    </td>
+				</tr>
+				 <tr class="row-fluid">
+                    <td class="col-md-3 col-padding">
+					<div>
+                       <input id="fastfoods1" name="tabapis" data-ej-text="Fastfoods" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radiodisable"
+                            value="fastfoods" />
+					</div>
+					<div>
+                        <input id="soups1" name="tabapis" data-ej-text="Soups" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radiodisable"
+                            value="soups" />
+					</div>
+					<div>
+                        <input id="snacks1" name="tabapis" data-ej-text="Snacks" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radiodisable"
+                            value="snacks" />
+					</div>
+					<div>
+						<input id="beverages1" name="tabapis" data-ej-text="Beverages" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radiodisable"
+                            value="beverages" />
+					</div>
+                    </td>
+                </tr>
+                <tr class="row-fluid">
+                    <td class="col-md-3">
+                        Enable tab
+                    </td>
+				</tr>
+				 <tr class="row-fluid">
+                    <td class="col-md-3 col-padding">
+					<div>
+                        <input id="fastfoods2" name="tabapi" data-ej-text="Fastfoods" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radioenable"
+                            value="fastfoods" />
+					</div>
+					<div>
+                        <input id="soups2" name="tabapi" data-ej-text="Soups" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radioenable"
+                            value="soups" />
+					</div>
+					<div>
+                        <input id="snacks2" name="tabapi" data-ej-text="Snacks" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radioenable"
+                            value="snacks" />
+					</div>
+					<div>
+						<input id="beverages2" name="tabapi" data-ej-text="Beverages" type="radio" data-role="ejmradiobutton"  data-ej-touchend="radioenable"
+                            value="beverages" />
+					</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </script>
+    <script type="text/javascript">
+        $("body").bind("viewbeforetransfer", function (e, data) {
+            if ($(App.activePage.find('#listbox')).ejmListView('getActiveItemText') == "API's") {
+                $('#tabdefault').css("visibility", "hidden");
+                $('#tablod').css("visibility", "hidden");
+                $('#tabsamp').css("visibility", "");
+                if (data.options.pageId == "properties")
+                    $('#tabsamp').css("visibility", "hidden");
+            }
+            if (ej.getRenderMode() == "windows" && !ej.isLowerResolution())
+                $('#tabsamp').attr('data-ej-allowscrolling', true);
+        });
+        function radiodisable(args) {
+            $('#' + args.value + "2").ejmRadioButton('model.checked', false);
+            if (args.value == "fastfoods") {
+                $("#tabsamp").ejmTab("disableItem", 0);
+                $("#tabsamp").ejmTab("enableItem", 1);
+                $("#tabsamp").ejmTab("enableItem", 2);
+                $("#tabsamp").ejmTab("enableItem", 3);
+            }
+            else if (args.value == "soups") {
+                $("#tabsamp").ejmTab("disableItem", 1);
+                $("#tabsamp").ejmTab("enableItem", 0);
+                $("#tabsamp").ejmTab("enableItem", 2);
+                $("#tabsamp").ejmTab("enableItem", 3);
+            }
+            else if (args.value == "snacks") {
+                $("#tabsamp").ejmTab("disableItem", 2);
+                $("#tabsamp").ejmTab("enableItem", 0);
+                $("#tabsamp").ejmTab("enableItem", 1);
+                $("#tabsamp").ejmTab("enableItem", 3);
+            }
+            else {
+                $("#tabsamp").ejmTab("disableItem", 3);
+                $("#tabsamp").ejmTab("enableItem", 0);
+                $("#tabsamp").ejmTab("enableItem", 1);
+                $("#tabsamp").ejmTab("enableItem", 2);
+            }
+        }
+        function radioenable(args) {
+            $('#' + args.value + "1").ejmRadioButton('model.checked', false);
+            if (args.value == "fastfoods")
+                $("#tabsamp").ejmTab("enableItem", 0);
+            else if (args.value == "soups")
+                $("#tabsamp").ejmTab("enableItem", 1);
+            else if (args.value == "snacks")
+                $("#tabsamp").ejmTab("enableItem", 2);
+            else
+                $("#tabsamp").ejmTab("enableItem", 3);
+        }
+    </script>
+</body>
+</html>

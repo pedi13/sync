@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for Javascript Mobile - Sales Dashboard</title>
+    <link rel="stylesheet" href="../../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../../themes/responsive.css" />
+    <link rel="stylesheet" href="../../themes/ej.showcase.min.css" />
+    <link rel="stylesheet" href="../../themes/ej.showcase_responsive.min.css" />
+    <script type="text/javascript" src="../../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../scripts/support.js"></script>
+    <script type="text/javascript" src="../../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../../scripts/chartrender.js"></script>
+    <script type="text/javascript" src="../../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../../scripts/samplebrowser.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            initSales();
+        });
+    </script>
+</head>
+<body>
+    <div data-role="appview" class="salespage e-m-user-select e-m-light">
+        <div id="salesheader" data-role="ejmheader" data-ej-theme="dark" data-ej-title="Sales Overview"
+            data-ej-showleftbutton="true" data-ej-leftbuttoncaption="Back" data-ej-position="normal"
+            data-ej-windows-allowcustomtext="true" data-ej-showrightbutton="true" data-ej-rightbuttonimageclass="rightbuttonclass" data-ej-rightbuttontap="menuopen">
+        </div>
+        <div id="labeltemplate" style="display: none;">
+            <div style="margin-top: -10px; margin-left: -1px;">
+                <table style="width: 40px;">
+                    <tr>
+                        <td>
+                            <label style="color: white; font-size: 14px; width: 40px; text-wrap: normal; font-weight: normal;
+                                text-align: center;" id="Label4">
+                                {{:name}}</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="MainContent" class="main container-fluid">
+            <div>
+                <div class="andtitle">
+                </div>
+                <div class="gaugetitle">
+                    <div class="title">
+                        <div class="titlediv margin">
+                            Marketing vs Revenue by Product Category
+                        </div>
+                    </div>
+                </div>
+                <div class="gaugecontainer">
+                    <div class="row-fluid padding">
+                        <div class="">
+                            <div class="span3 automotive">
+                            </div>
+                            <div class="span3 books">
+                            </div>
+                            <div class="span3 clothing">
+                            </div>
+                            <div class="span3 electronics">
+                            </div>
+                        </div>
+                        <div class="span12 image1">
+                        </div>
+                    </div>
+                </div>
+                <div class="span12 image1">
+                </div>
+                <div class="chartgridcontainer">
+                    <div class="row-fluid padding">
+                        <div class="gridchart">
+                            <div class="span6 barchart">
+                            </div>
+                            <div class="span6">
+                            </div>
+                        </div>
+                        <div class="span12 image2">
+                        </div>
+                    </div>
+                </div>
+                <div class="span12 image2">
+                </div>
+                <div class="rangecontainer">
+                    <div class="row-fluid padding">
+                        <div class="">
+                            <div class="span12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+            </div>
+        </div>
+        <div id="MainScroll" data-ej-scrollstart="onScrollStart" data-ej-enablehrscroll="true"
+            data-ej-scroll="onScroll" data-ej-scrollend="onScrollEnd" data-role="ejmscrollpanel"
+            data-ej-target="MainContent">
+        </div>
+        <div class="waitingpopup" style="display: none;">
+        </div>
+        <div id="yearMenu" data-role="ejmmenu" data-ej-target="menu" data-ej-theme="light"
+            data-ej-ios7-showtitle="false" data-ej-ios7-showcancelbutton="true" data-ej-touchend="changeRecord">
+            <ul>
+                <li data-ej-text="Year 2012 Report"></li>
+                <li data-ej-text="Year 2011 Report"></li>
+                <li data-ej-text="Year 2010 Report"></li>
+                <li data-ej-text="Year 2009 Report"></li>
+            </ul>
+        </div>
+        <script>
+            if (ej.isMobile() && ej.isAndroid()) {
+                $("#salesheader").attr("data-ej-theme", "dark");
+            }
+            $(document).on('touchstart mousedown', function (e) {
+                if (e.target && e.target.parentElement && e.target.parentElement.nodeName == "g")
+                    $('#MainScroll').ejmScrollPanel("disable");
+            });
+            $(document).on('touchend mouseup', function (e) {
+                if (e.target && e.target.parentElement && e.target.parentElement.nodeName == "g")
+                    $('#MainScroll').ejmScrollPanel("enable");
+            });
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head data-ej-theme="light">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for Javascript Mobile - Stock Analysis</title>
+    <link rel="shortcut icon" href="../../../themes/sample/favicon.ico" />
+    <link rel="stylesheet" href="../../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../../themes/responsive.css" />
+    <link rel="stylesheet" href="../../themes/ej.showcase.min.css" />
+    <link rel="stylesheet" href="../../themes/ej.showcase_responsive.min.css" />
+    <script type="text/javascript" src="../../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../scripts/support.js"></script>
+    <script type="text/javascript" src="../../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../../scripts/chartrender.js"></script>
+    <script type="text/javascript" src="../../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../../scripts/stockanalysis.js"></script>
+    <script>
+        $(function () {
+            stockInit();
+        });
+    </script>
+</head>
+<body>
+    <div data-role="appview" class="stockpage page e-m-user-select e-m-light">
+        <!-- Header Section -->
+        <div id="stockheader" data-ej-showleftbutton="true" data-ej-leftbuttoncaption="Back"
+            data-ej-title="Stock Analysis" data-ej-windows-allowcustomtext="true" data-role="ejmheader"
+            data-ej-theme="dark" data-ej-position="normal">
+        </div>
+        <!-- Navigation pane Section -->
+        <div id="stocknav">
+            <div class="stocknav">
+            </div>
+        </div>
+        <!-- End of Header Section -->
+        <!-- SplitPane Section -->
+        <div id="stocksptpane" data-role="ejmsplitpane" data-ej-allowleftpanescrolling="false"
+            data-ej-ios7-showleftpaneheader="false" data-ej-ios7-showrightpaneheader="false"
+            data-ej-windows-showleftpaneheader="false" data-ej-windows-showrightpaneheader="false"
+            data-ej-allowrightpanescrolling="false" data-ej-beforetransfer="beforetransfer"
+            data-ej-android-showtoolbar="false" data-ej-enableswipe="false">
+            <div data-ej-layout="pane">
+                <!-- Left Pane -->
+                <div>
+                    <div data-role="ejmlistview" id="stocklistbox" data-ej-autoadjustheight="true" data-ej-allowscrolling="true"
+                        data-ej-enablenativescrolling="false" data-ej-showheader="false" data-ej-persistselection="true"
+                        data-ej-selecteditemindex="0" data-ej-grouplist="false" data-ej-touchend="showContent">
+                        <ul>
+                            <li action="GOOG" id="google" data-ej-rendertemplate="true" data-ej-templateid="googletemplate"></li>
+                            <li action="MSFT" id="microsoft" data-ej-rendertemplate="true" data-ej-templateid="msfttemplate"></li>
+                            <li action="NOK" id="nokia" data-ej-rendertemplate="true" data-ej-templateid="nokiatemplate"></li>
+                            <li action="AAPL" id="apple" data-ej-rendertemplate="true" data-ej-templateid="appletemplate"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script id="googletemplate" type="text/x-jsrender">
+            <div id="gog" class="divcontainer">
+                <div class="innercontainer">
+                    <div class="listtext">GOOGLE</div>
+                    <div class="target"></div>
+                    <div class="status">High</div>
+                    <div class="value">6.82</div>
+                    <div class="openvalue">562.82</div>
+                    <div class="closevalue">593.97</div>
+                </div>
+            </div>
+        </script>
+        <script id="msfttemplate" type="text/x-jsrender">
+            <div id="msft" class="divcontainer">
+                <div class="innercontainer">
+                    <div class="listtext">MICROSOFT</div>
+                    <div class="target inverted"></div>
+                    <div class="status">Low</div>
+                    <div class="value">17.78</div>
+                    <div class="openvalue">25.58</div>
+                    <div class="closevalue">27.91</div>
+                </div>
+            </div>
+        </script>
+        <script id="nokiatemplate" type="text/x-jsrender">
+            <div id="nokiatmp" class="divcontainer">
+                <div class="innercontainer">
+                    <div class="listtext"> NOKIA</div>
+                    <div class="target inverted"></div>
+                    <div class="status">Low</div>
+                    <div class="value">15.35</div>
+                    <div class="openvalue">9.5</div>
+                    <div class="closevalue">
+                        10.32
+                    </div>
+                </div>
+            </div>
+        </script>
+        <script id="appletemplate" type="text/x-jsrender">
+            <div id="appletmp" class="divcontainer">
+                <div class="innercontainer">
+                    <div class="listtext">APPLE</div>
+                    <div class="target inverted"></div>
+                    <div class="status">Low</div>
+                    <div class="value">21.56</div>
+                    <div class="openvalue">315.66</div>
+                    <div class="closevalue">322.56</div>
+                </div>
+            </div>
+        </script>
+
+        <!-- Right Pane -->
+        <div id="rightpane">
+            <div>
+                <div class="chhilocontent">
+                    <div class="valuetitle">
+                    </div>
+                </div>
+                <div class="chcontent">
+                    <div class="valuetitle">
+                    </div>
+                </div>
+                <div class="rgcontent">
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroller -->
+        <div id="scrollright" data-role="ejmscrollpanel" data-ej-target="rightpane" data-ej-enablehrscroll="false">
+        </div>
+    </div>
+</body>
+</html>
+

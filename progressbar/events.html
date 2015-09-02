@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile - ProgressBar - Events</title>
+    <link rel="stylesheet" href="../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../themes/responsive.css" />
+    <link rel="stylesheet" href="../themes/ej.showcase.min.css" />
+    <script type="text/javascript" src="../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/support.js"></script>
+    <script type="text/javascript" src="../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/samplebrowser.js"></script>
+</head>
+<body>
+    <div id="progressSample" class="sample progresssample">
+        <div style="position: relative; overflow-y: auto; overflow-x: hidden;" id="progressBar_eve"
+            data-role="ejmprogress" data-ej-value="0" data-ej-enablecustomtext="true" data-ej-change="onChange"
+            data-ej-text="0%">
+        </div>
+        <br />
+        <div align="center" class="progressbar_event">
+            <div class="sampebutton" style="display: inline-block;">
+                <input id="button1" data-role="ejmbutton" type="button" data-ej-text="Start" data-ej-inline="false"
+                    data-ej-touchend="onbtntouchstart" />
+            </div>
+        </div>
+        </br> <span style="display: block; text-align: center;">Events Log:</span>
+        <div id="progressScroll" class="progressEventLog" style="overflow-x: hidden;">
+            <div>
+                <div id="value1">
+                </div>
+            </div>
+        </div>
+        <div id="Div1" data-ej-target="progressScroll" data-role="ejmscrollpanel" data-ej-checkdomchanges="true"
+            data-ej-targetheight="150">
+        </div>
+    </div>
+    <script type="text/javascript">
+        var timeInterval;
+        var curValue = 0;
+        window.clearInterval(timeInterval);
+        function onChange(args) {
+            var cText = "" + $("#progressBar_eve").ejmProgress('model.value') + "%";
+            $("#progressBar_eve").ejmProgress({ 'text': cText });
+        }
+        function onbtntouchstart(args) {
+            if (args.text == "Start" || args.text == "Restart") {
+				if(args.text == "Restart")
+					App.activePage.find("#value1").html("");
+                timeInterval = window.setInterval("progress()", 200);
+                App.activePage.find("#button1").ejmButton({ "text": "Pause" });
+            }
+            else if (args.text == "Pause") {
+                App.activePage.find("#button1").ejmButton({ "text": "Start" });
+                timeInterval = window.clearInterval(timeInterval);
+            }
+        }
+        function progress() {
+            var newValue = curValue++;
+            App.activePage.find("#progressBar_eve").ejmProgress({ "value": curValue });
+            App.activePage.find("#value1").prepend("<br/>ProgressBar Value:" + curValue );
+            if (curValue == 100) {
+                timeInterval = window.clearInterval(timeInterval);
+                App.activePage.find("#button1").ejmButton({ "text": "Restart" });
+                App.activePage.find("#value1").prepend("<br/> The Process has been completed Successfully<br/>");
+                curValue = 0;
+            }
+        }
+        $(document).delegate($("body"), "subviewtransfer", function (e, data) {
+                if (window.control == "progressbar" && location.hash=="#events") {
+                App.activeSubPage.find("#button1").ejmButton({ "text": "Start" });
+                window.clearInterval(timeInterval);
+            }
+        });
+        $(document).delegate($("body"), "viewbeforetransfer", function (e, data) {
+            window.clearInterval(timeInterval);
+        });
+    </script>
+</body>
+</html>

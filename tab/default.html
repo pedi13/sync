@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile - Tab - Default</title>
+    <link rel="stylesheet" href="../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../themes/responsive.css" />
+    <link rel="stylesheet" href="../themes/ej.showcase.min.css" />
+    <script type="text/javascript" src="../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/support.js"></script>
+    <script type="text/javascript" src="../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/samplebrowser.js"></script>
+</head>
+<body>
+    <div data-role="ejmlistview" data-ej-allowscrolling="false" data-ej-showheader="false" id="default1">
+        <ul>
+            <li data-ej-text="The Karate Kid"></li>
+            <li data-ej-text="Bullet to the Head"></li>
+            <li data-ej-text="This Means War"></li>
+            <li data-ej-text="Matrix"></li>
+            <li data-ej-text="Scary Movie 5"></li>
+        </ul>
+    </div>
+    <div data-role="ejmlistview" data-ej-allowscrolling="false" data-ej-showheader="false" id="default2">
+        <ul>
+            <li data-ej-text="The Monster"></li>
+            <li data-ej-text="Not Afraid"></li>
+            <li data-ej-text="Without Me"></li>
+            <li data-ej-text="Lost Yourself"></li>
+        </ul>
+    </div>
+    <div data-role="ejmlistview" data-ej-allowscrolling="false" data-ej-showheader="false" id="default3">
+        <ul>
+            <li data-ej-text="This Means War"></li>
+            <li data-ej-text="Scary Movie 5"></li>
+            <li data-ej-text="Not Afraid"></li>
+        </ul>
+    </div>
+    <div data-role="ejmlistview" data-ej-allowscrolling="false" data-ej-showheader="false" id="default4">
+        <ul>
+            <li data-ej-text="Not Afraid"></li>
+            <li data-ej-text="Till I Collapse"></li>
+        </ul>
+    </div>
+    <div data-role="ejmtab" id="tabdefault" data-ej-android-position="normal" data-ej-windows-position="normal"
+        data-ej-flat-position="normal">
+        <ul>
+            <li data-ej-ios7-imageclass="e-m-icon-movies" data-ej-href="#default1" data-ej-text='Movies'>
+            </li>
+            <li data-ej-ios7-imageclass="e-m-icon-music" data-ej-href="#default2" data-ej-text='Music'>
+            </li>
+            <li data-ej-ios7-imageclass="e-m-icon-favourites" data-ej-href="#default3" data-ej-text='Favourites'>
+            </li>
+            <li data-ej-ios7-imageclass="e-m-icon-playlist" data-ej-href="#default4" data-ej-text='Playlist'>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $("body").bind("viewbeforetransfer", function (e, data) {
+            if ($(App.activePage.find('#listbox')).ejmListView('getActiveItemText') == "Default") {
+                $('#tabsamp').css("visibility", "hidden");
+                $('#tablod').css("visibility", "hidden");
+                $('#tabdefault').css("visibility", "");
+            }
+            if (ej.getRenderMode() == "windows" && !ej.isLowerResolution())
+                $('#tabdefault').attr('data-ej-allowscrolling', true);
+        });
+    </script>
+</body>
+</html>

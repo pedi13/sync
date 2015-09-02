@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile - Map - Heat Map</title>
+    <link rel="stylesheet" href="../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../themes/samplestyle.css" />
+    <script type="text/javascript" src="../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.ko.min.js"></script>
+    
+</head>
+<script type="text/javascript">
+    $(function () {
+        createMap();
+    });
+</script>
+<body>
+    <script type="text/javascript" src="../scripts/MapsData/HeatMapData.min.js"></script>	
+	<link rel="stylesheet" href="../themes/ej.theme.min.css"/>
+    <style type="text/css">
+        .e-map
+        {
+            background-color: transparent;
+        }
+        .popup
+        {
+            border: 1px solid #A0A0A0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            bottom: 2em;
+            border-radius: 7px;
+            position: absolute;
+            left: 70%;
+            opacity: 0.8;
+            display: none;
+            width: 160px;
+            padding: 6px;
+            height: 50px;
+            background: white;
+        }
+        
+        .close-btn
+        {
+            border: 2px solid #A0A0A0;
+            position: absolute;
+            opacity: 0.8;
+            background-color: #A0A0A0;
+            left: 90%;
+            top: 77.5%;
+            border-radius: 50%/50%;
+            width: 18px;
+            height: 19px;
+            display: none;
+            z-index: 1000;
+        }
+        
+        .close-btn a
+        {
+            font-size: 12px;
+            margin-left: 5px;
+            top: 2px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            position: absolute;
+        }
+        
+        .home-circle
+        {
+            border: 2px solid #85CBE5;
+            opacity: 0.8;
+            background-color: #85CBE5;
+            top: 10px;
+            left: 85%;
+            border-radius: 50%/50%;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            z-index: 1000;
+        }
+        
+        .home-circle:hover
+        {
+            border: 2px solid white;
+        }
+    </style>
+    <div style="height: inherit">
+        <div id="maps" data-role="ejmmaps" style="height: inherit">
+        </div>
+        <div class="popup" id="close-popup">
+            <table style="width: auto">
+                <tr>
+                    <td align="left" style="padding: 0.3px">
+                        <label style="color: Black; font-size: 12px; font-weight: normal;">
+                            State</label>
+                    </td>
+                    <td align="left" style="padding: 0.3px">
+                        <label style="color: Black; font-size: 12px; font-weight: normal; margin-left: 5px">
+                            :</label>
+                    </td>
+                    <td align="left" style="padding: 0.3px">
+                        <label id="state" style="color: Black; font-size: 12px; font-weight: normal; margin-left: 5px">
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="padding: 0.3px">
+                        <label style="color: Black; font-size: 12px; font-weight: normal;">
+                            Population
+                        </label>
+                    </td>
+                    <td align="left" style="padding: 0.3px">
+                        <label style="color: Black; font-size: 12px; font-weight: normal; margin-left: 5px">
+                            :</label>
+                    </td>
+                    <td align="left" style="padding: 0.3px">
+                        <label id="population" style="color: Black; font-size: 12px; font-weight: normal;
+                            margin-left: 5px">
+                        </label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="close-btn" id="close-button">
+            <a href="#">X</a></div>
+        <div class="home-circle" id="home" onclick="onClick()">
+            <svg xmlns='http://www.w3.org/2000/svg' width="20" height="20" viewbox="0 0 20 20"
+                style="margin-left: 5px; margin-top: 4px">
+                <g>
+                </g><path d="M20 11.532l-10-7.762-10 7.762v-3.165l10-7.762 10 7.762zM17.5 11.25v7.5h-5v-5h-5v5h-5v-7.5l7.5-5.625z"
+                    fill="white" /></svg>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function createMap() {
+            var ua = window.navigator.userAgent;
+            var msie = ua.indexOf("MSIE ");
+            if (ej.isDevice()) {
+                $("#maps").css("height", innerHeight - 50);
+            }
+            else {
+                if (msie > 0) {
+					$("#maps").css("height", innerHeight - 450);				
+				}
+				else
+				{
+					$("#maps").css("height", innerHeight - 250);				
+				}		
+            }
+            $("#maps").ejMap({
+
+                onRenderComplete: "onRender",
+
+                shapeSelected: 'onSelect',
+
+                enableAnimation: true,
+                layers: [
+                     {
+                         layerType: 'geometry',
+                         enableMouseHover: true,
+                         enableSelection: true,
+                         showTooltip: false,
+                         shapeDataPath: "name",
+                         legendSettings: {
+                             showLegend: true,
+                             position: "none",
+                             positionX: 5,
+                             positionY: 1,
+                             height: 18,
+                             width: 138,
+                             type: "layers",
+                             mode: "interactive",
+                             title: "Population",
+                             leftLabel: "0.5",
+                             rightLabel: "40M"
+                         },
+                         shapePropertyPath: "name",
+                         showMapItems: false,
+                         dataSource: USA_State_PopulationData,
+                         shapeSettings: {
+                             fill: "#9CBF4E",
+                             strokeThickness: 0.5,
+                             stroke: "White",
+                             highlightStroke: "White",
+                             autoFill: false,
+                             highlightColor: "#FF9B57",
+                             highlightBorderWidth: 1,
+                             valuePath: "population",
+                             selectionColor: "#DD4614",
+                             selectionStroke: "White",
+                             selectionStrokeWidth: 1,
+                             enableGradient: true,
+                             colorMappings:
+                                 {
+                                     rangeColorMapping: [
+                                      {
+                                          from: 500000,
+                                          to: 1000000,
+                                          gradientColors: ["#9CBF4E", "#B8CE7B"]
+                                      },
+                                         {
+                                             from: 1000001,
+                                             to: 5000000,
+                                             gradientColors: ["#B8CE7B", "#CBD89A"]
+
+                                         },
+                                         {
+                                             from: 5000001,
+                                             to: 10000000,
+                                             gradientColors: ["#CBD89A", "#DEE2B9"]
+
+                                         },
+                                         {
+                                             from: 10000001,
+                                             to: 40000000,
+                                             gradientColors: ["#DEE2B9", "#F1ECD8"]
+
+                                         }
+                                     ]
+                                 }
+                         },
+                         shapeData: usMap
+                     }
+                ]
+
+            });
+        }
+
+        function onRender() {
+            var popup = document.getElementById("close-popup");
+            var closebutton = document.getElementById("close-button");
+            var width = $("#maps").width();
+            var height = $("#maps").height();
+            if (height > width) {
+
+                $(closebutton).css("left", (width / 2) + 73);
+                $(popup).css("left", (width - 250));
+            }
+            else {
+                $(popup).css("left", width - 220);
+                $(closebutton).css("left", (width - 220) + 162);
+
+            }
+            var popupPercent = height * (80 / 100);
+            $(closebutton).css("top", popupPercent - 11 + "px");
+            $(popup).css("top", popupPercent + "px");
+
+        }
+
+        function onClick() {
+
+            $("#maps").ejMap("zoom", 1, true);
+
+        }
+
+        function onSelect(event) {
+            if(event.originalEvent[0]!=null)
+			{
+            var object = event.originalEvent[0].data;
+            var popup = document.getElementById("close-popup");
+            var closebutton = document.getElementById("close-button");
+            var state = document.getElementById("state");
+            var population = document.getElementById("population");
+            $(popup).css("display", "block");
+            $(closebutton).css("display", "block");
+            $(closebutton).click(function () {
+                $(popup).css("display", "none");
+                $(closebutton).css("display", "none");
+            });
+            state.innerHTML = object.name;
+            population.innerHTML = parseDouble(object.population);
+        }
+    }
+        function parseDouble(amount) {
+            var delimiter = ",";
+            var i = parseInt(amount);
+            if (isNaN(i)) { return ''; }
+            var origi = i;  // store original to check sign
+            i = Math.abs(i);
+            var minus = '';
+            if (origi < 0) { minus = '-'; } // sign based on original
+            var n = new String(i);
+            var a = [];
+            while (n.length > 3) {
+                var nn = n.substr(n.length - 3);
+                a.unshift(nn);
+                n = n.substr(0, n.length - 3);
+            }
+            if (n.length > 0) { a.unshift(n); }
+            n = a.join(delimiter);
+            amount = minus + n;
+            return amount;
+        }
+
+    </script>
+</body>
+</html>

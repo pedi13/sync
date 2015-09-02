@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile - TreeMap - Hierarchical </title>
+    <link rel="stylesheet" href="../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../themes/responsive.css" />
+    <link rel="stylesheet" href="../themes/ej.showcase.min.css" />
+    <script type="text/javascript" src="../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/support.js"></script>
+    <script type="text/javascript" src="../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/samplebrowser.js"></script>
+</head>
+<script type="text/javascript">
+    $(function () {
+        createMap();
+    });
+</script>
+<body>
+    <div style="width: inherit; height: inherit;">
+        <div style="width: inherit; height: inherit; margin: 2px;" id="treemapcontainer">
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        function createMap() {
+			createTreeMap();
+		}
+		
+		function createTreeMap() {
+            if (ej.isDevice()) {
+                $("#treemapcontainer").css("height", innerHeight - 50);
+            }
+            else {
+                $("#treemapcontainer").css("height", innerHeight - 250);
+            }
+            $("#treemapcontainer").ejTreeMap({
+                dataSource: sales_data,
+                borderBrush: "#666666",
+                borderThickness: 1,
+                tooltipTemplate: "tooltiptemp",
+                showTooltip: true,
+                colorValuePath: "Expense",
+                weightValuePath: "Sales",
+                desaturationColorMapping: { from: 1, to: 0.5, color: "#41B8C4", rangeMinimum: 2000, rangeMaximum: 8000 },
+                levels: [
+                  { groupPath: "Country", groupGap: 3, headerHeight: 30, headerTemplate: 'headertemp', showLabels: true, labelTemplate: 'labeltemp' }
+
+                  ]
+            });
+        }
+    </script>
+    <script id="tooltiptemp" type="application/jsrender">	
+        <table style="background-color: #222222; width: 166px; height: 107px;">
+            <tr>
+                <td colspan="3">
+                    <label style="font-size: 18px; color: white; margin-left: 10px; opacity: 0.8; font-weight: normal;">
+                        {{:Country}}</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="font-size: 14px; color: white; margin-left: 10px; opacity: 0.8; font-weight: normal;">
+                        Region</label>
+                </td>
+                <td>
+                    <label style="font-size: 14px; color: white; margin-left: 10px; opacity: 0.8; font-weight: normal;">
+                        :</label>
+                </td>
+                <td colspan="3">
+                    <label style="font-size: 14px; color: white; margin-left: 10px; opacity: 0.8; font-weight: normal;">
+                        {{:Name}}</label>
+                </td>
+                <td style="width: 20px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="font-size: 14px; color: white; margin-left: 10px; opacity: 0.8; font-weight: normal;">
+                        Sales</label>
+                </td>
+                <td>
+                    <label style="font-size: 14px; color: white; margin-left: 10px; opacity: 0.8; font-weight: normal;">
+                        :</label>
+                </td>
+                <td colspan="3">
+                    <label style="font-size: 14px; color: white; margin-left: 10px; opacity: 0.8; font-weight: normal;">
+                        {{:Sales}}</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="font-size: 14px; color: white; margin-left: 10px; opacity: 0.8; font-weight: normal;">
+                        Expense</label>
+                </td>
+                <td>
+                    <label style="font-size: 14px; color: white; margin-left: 10px; opacity: 0.8; font-weight: normal;">
+                        :</label>
+                </td>
+                <td colspan="3">
+                    <label style="font-size: 14px; color: white; margin-left: 10px; opacity: 0.8; font-weight: normal;">
+                        {{:Expense}}</label>
+                </td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+    </script>
+    <script id="headertemp" type="application/jsrender">	
+        <div>
+            <label style="color: gray; font-size: 18px; font-weight: normal;" id="Label1">
+                {{:header}}</label><br />
+        </div>
+    </script>
+    <script id="labeltemp" type="application/jsrender">	
+        <div align="center" style="width: 120px; height: 120px; background-image: url('../images/treemap/circle.png');">
+            <table style="text-align: center; margin-left: -10px; margin-top: 10px;">
+                <tr>
+                    <td>
+                    </td>
+                    <th>
+                        <div style="margin-top: 10px; margin-left: 10px;">
+                            <label style="color: white; font-size: 16px; font-weight: normal;" id="Label2">
+                                Sales</label>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <div style="margin-top: -5px;">
+                            <label style="color: white; font-size: 15px; font-weight: normal;" id="Label5">
+                                98486</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr />
+                <tr>
+                    <td>
+                    </td>
+                    <th>
+                        <div style="margin-top: 3px; margin-left: 2px;">
+                            <label style="color: white; font-size: 16px; margin-top: -5px; font-weight: normal;"
+                                id="Label3">
+                                Expense</label>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <div style="margin-top: -5px;">
+                            <label style="color: white; font-size: 15px; font-weight: normal;" id="Label4">
+                                87000</label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </script>
+</body>
+</html>

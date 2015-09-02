@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for Javascript Mobile - Expense Analysis</title>
+    <link rel="shortcut icon" href="../../../themes/sample/favicon.ico" />
+    <link rel="stylesheet" href="../../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../../themes/responsive.css" />
+    <link rel="stylesheet" href="../../themes/ej.showcase.min.css" />
+    <link rel="stylesheet" href="../../themes/ej.showcase_responsive.min.css" />
+    <script type="text/javascript" src="../../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../scripts/support.js"></script>
+    <script type="text/javascript" src="../../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../../scripts/chartrender.js"></script>
+    <script type="text/javascript" src="../../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../../scripts/samplebrowser.js"></script>
+</head>
+<body>
+    <div data-role="appview" id="expense_page" class="expensepage">
+        <div class="expenseanalysis subpage" style="visibility:hidden">
+            <!-- Header Rendering-->
+            <div id="ex_header">
+                <div id="expense_header" data-role="ejmheader" data-ej-title="Expense Analysis" data-ej-showleftbutton="true"
+                     data-ej-theme="dark" data-ej-position="normal" data-ej-showrightbutton="true" data-ej-rightbuttonimageclass="rightbuttonclass" data-ej-rightbuttontap="menuopen">
+                </div>
+                <div id="yearMenu" data-role="ejmmenu" data-ej-target="menu" data-ej-theme="light"
+                     data-ej-ios7-showtitle="false" data-ej-ios7-showcancelbutton="true" data-ej-touchend="yearselected">
+                    <ul>
+                        <li data-ej-text="Year 2013 Report"></li>
+                        <li data-ej-text="Year 2012 Report"></li>
+                        <li data-ej-text="Year 2011 Report"></li>
+                        <li data-ej-text="Year 2010 Report"></li>
+                        <li data-ej-text="Year 2009 Report"></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Scrolling container-->
+            <div class="details_container" id="detailsContainer" align="center">
+                <div>
+                    <!--Details container-->
+                    <div class="wrapper_div">
+                        <table class="main">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="personaldetails">
+                                            <div class="img_wrap">
+                                                <img class="personimg" src="themes/sample/expense_person.png" />
+                                            </div>
+                                            <div class="persondetails">
+                                                <ul>
+                                                    <li class="name">David Carter</li>
+                                                    <li class="contact">Phone : 989359839</li>
+                                                    <li class="contact">e-mail : david@mail.com</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="details">
+                                            <div class="dynamic_pos dynamic">
+                                            </div>
+                                            <div>
+                                                <ul>
+                                                    <li>Positive</li>
+                                                    <li class="trans_pos trans">Transactions</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="details">
+                                            <div class="dynamic_neg dynamic">
+                                            </div>
+                                            <div>
+                                                <ul>
+                                                    <li>Negative</li>
+                                                    <li class="trans_neg trans">Transactions</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="details">
+                                            <div class="dynamic_bal dynamic">
+                                            </div>
+                                            <div>
+                                                <ul>
+                                                    <li>Balance</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="data" style="display: inline-block; width: 100%">
+                        <!--Pie chart Rendering-->
+                        <div class="pie_chart">
+                            <div class="title">
+                                Expense Analysis Chart
+                            </div>
+                            <div id="ExpenseChart" class="">
+                                <div class="backbutton">
+                                    &nbsp;
+                                </div>
+                            </div>
+                            <div class="content">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li class="text">Most Spent</li>
+                                                <li class="most-spent-amt amount"></li>
+                                                <li class="text most-spent-day"></li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li class="text">Least Spent</li>
+                                                <li class="least-spent-amt amount"></li>
+                                                <li class="text least-spent-day"></li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li class="text">Average Spent</li>
+                                                <li class="avg-spent-amt amount"></li>
+                                                <li class="text avg-spent-day"></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--Transaction Grid Rendering-->
+                        <div class="grid">
+                            <div class="title">
+                                Transactions
+                            </div>
+                            <div class="addimg">
+                            </div>
+                            <div class="ExpenseGridparent">
+                                <div id="ExpenseGrid" class="margintop content-gc">
+                                </div>
+                            </div>
+                            <!--Add Transaction Dialog-->
+                            <div id="expense_gridadd" data-ej-allowscrolling="true" data-ej-enablemodal="true"
+                                 data-ej-theme="light" data-role="ejmdialog" data-ej-close="clearfields" data-ej-rightbuttoncaption="Add"
+                                 data-ej-buttontap="closedialog" data-ej-mode="confirm" data-ej-title="Add Transaction"
+                                 data-ej-templateid="addexpense_template">
+                                <!--Dialog Content-->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--RangeNavigator Rendering-->
+                    <div class="rangewrapper row-fluid">
+                        <div class="expense_rangeparent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="expense_scroll" data-role="ejmscrollpanel" data-ej-target="detailsContainer" data-ej-autoadjustheight="true" data-ej-enablehrscroll="false">
+            </div>
+        </div>
+        <!--Expense Add page-->
+        <div class="expenseaddpage subpage" id="expenseaddpage">
+            <div data-role="ejmtoolbar" data-ej-templateid="toolbartemplate" data-ej-windows-position="fixed" data-ej-position="normal"
+                 data-ej-android-title="Add New Record" data-ej-touchend="addentryExpenseAnalysis"
+                 data-ej-theme="dark" id="toolbaritem">
+                <ul>
+                    <li data-ej-iconname="done"></li>
+                    <li data-ej-iconname="close"></li>
+                </ul>
+            </div>
+            <div id="toolbartemplate">
+                <div class="donebtn e-m-icon-android-apidone">
+                    Done
+                </div>
+            </div>
+            <div id="expenseaddheader" data-ej-windows-allowcustomtext="true" data-ej-showleftbutton="true"
+                 data-ej-showrightbutton="true" data-ej-rightbuttontap="addentryExpenseAnalysis"
+                 data-ej-rightbuttoncaption="Done" data-ej-title="Add New Record" data-role="ejmheader"
+                 data-ej-theme="dark" data-ej-position="normal">
+            </div>
+            <div id="addPageContent">
+                <div>
+                    <div class="dialogcontentwrapper">
+                    </div>
+                </div>
+                <div id="expenseAddPageScroll" data-role="ejmscrollpanel" 
+                     data-ej-target="addPageContent">
+                </div>
+            </div>
+        </div>
+        <div class="waitingpopup" style="display: none;">
+        </div>
+        <script id="addexpense_template" type="text/x-jsrender">
+            <form id="additemform" class="additemform">
+                <div>
+                    <label>
+                        Description
+                    </label>
+                    <input data-role="ejmtextbox" id="transdesc" type="text" name="desc"
+                           required /><label for="transdesc" class="error" generated="true" />
+                </div>
+                <div>
+                    <label>
+                        Category
+                    </label>
+                    <input id="transcategory" data-role="ejmtextbox" type="text" name="category"
+                           required /><label for="transcategory" class="error" generated="true" />
+                </div>
+                <div>
+                    <label>
+                        Expense
+                    </label>
+                    <input id="transamount" data-role="ejmnumeric" type="number" data-ej-showspinbutton="false"
+                           data-ej-minvalue="1" data-ej-maxvalue="100000" name="expense"
+                           required /><label for="transamount" class="error" generated="true" />
+                </div>
+                <div class="account">
+                    <label>
+                        Account Type
+                    </label>
+                    <div>
+                        <select id="acctype" class="acctypeoptions" name="acctype" style="width: 100%; box-sizing: border-box">
+                            <option value="Negative">Negative</option>
+                            <option value="Positive">Positive</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </script>
+        <script type="text/javascript">
+            $(document).bind("viewtransfer", renderAllExpense);
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile - Chart - Stacking Bar Chart</title>
+    <link rel="stylesheet" href="../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../themes/responsive.css" />
+    <link rel="stylesheet" href="../themes/ej.showcase.min.css" />
+    <script type="text/javascript" src="../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/support.js"></script>
+    <script type="text/javascript" src="../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/samplebrowser.js"></script>
+</head>
+<body>
+    <div style="height: inherit">
+        <div id="container_stackingbar" data-role="ejmchart" style="height: inherit">
+        </div>
+    </div>
+    <script>
+        function ChartLoad() {
+            $("#container_stackingbar").ejChart(
+                      {
+                          primaryXAxis:
+                            {
+                                range: { min: 2005, max: 2012, interval: 1 },
+                                font: { size: '10px' }
+                            },
+
+                          primaryYAxis:
+                           {
+                               range: { min: -20, max: 60, interval: 20 },
+                               labelFormat: "{value}%",
+                               font: { size: '10px' }
+                           },
+                          commonSeriesOptions: {
+                              type: 'stackingbar', enableAnimation: false,
+                              tooltip: { visible: true }
+                          },
+
+
+                          series: [{
+                              points: [{ x: "Jan", y: 6 }, { x: "Feb", y: 8 }, { x: "Mar", y: 12 }, { x: "Apr", y: 15.5 }, { x: "May", y: 20 }, { x: "Jun", y: 24 }
+                              ],
+
+                              name: 'Apple', fill: "#1ABC9C"
+                          },
+                                {
+                                    points: [{ x: "Jan", y: 6 }, { x: "Feb", y: 8 }, { x: "Mar", y: 11 }, { x: "Apr", y: 16 }, { x: "May", y: 21 }, { x: "Jun", y: 25 }
+                                    ],
+
+                                    name: 'Orange', fill: "#3498DB"
+                                },
+								 {
+								     points: [{ x: "Jan", y: -1 }, { x: "Feb", y: -1.5 }, { x: "Mar", y: -2 }, { x: "Apr", y: -2.5 }, { x: "May", y: -3 }, { x: "Jun", y: -3.5 }
+								     ],
+
+								     name: 'Wastage', fill: "#34495E", opacity: 0.7
+								 }
+
+
+                          ],
+                          canResize: true,
+                          load: 'onchartload',
+                          title: { text: 'Sales Comparsion', font: { size: '15px' } },
+                          legend: { visible: false }
+                      });
+        }
+        function onchartload(sender) {
+           if (window.theme) {
+                if (window.theme[1] == "light")
+                    sender.model.theme = "flatlight"
+                else
+                    sender.model.theme = "flatdark"
+            }
+            else {   
+                if (ej.isDevice()) {                            // device
+				    if (ej.isWindows() && ej.isMobile())        // windows mobile
+                       sender.model.theme = "flatdark"
+					else
+					   sender.model.theme = "flatlight"         // windows tablet
+                }
+				else if(ej.isWindows())                         // windows desktop
+                       sender.model.theme = "flatdark"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html class="e-m-user-select">
+<head data-ej-theme="light">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile</title>
+    <link rel="shortcut icon" href="themes/sample/favicon.ico" />
+    <link rel="stylesheet" href="themes/bootstrap.css" />
+    <link rel="stylesheet" href="themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="themes/samplebrowser.css" />
+    <link rel="stylesheet" href="themes/samplestyle.css" />
+    <link rel="stylesheet" href="themes/responsive.css" />
+    <link rel="stylesheet" href="themes/ej.showcase.min.css" />
+    <link rel="stylesheet" href="themes/ej.showcase_responsive.min.css" />
+	<script>
+    	if (/msie 8.0/i.test(navigator.userAgent.toLowerCase()))
+	        location.replace("error.html");
+    </script>
+    <script type="text/javascript" src="scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="scripts/support.js"></script>
+    <script type="text/javascript" src="scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="scripts/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="scripts/stockanalysis.js"></script>
+</head>
+<body>
+    <div data-role="appview" class="showcase">
+        <div id="phoneappview">
+            <div class="phonelayout">
+                <div id="showcaseheader_phone" data-role="ejmheader" data-ej-title="Showcase" data-ej-position="fixed"
+                    data-ej-hideforunsupporteddevice="true">
+                </div>
+                <div id="showcasetabwrapper" class="container-fluid">
+                    <div>
+                        <script id="iosshowcasetab" type='text/x-jsrender'>
+                        <div id='{{>id}}' data-ej-imageclass='e-m-icon-{{>id}}' data-ej-touchend='showdashboard' data-ej-theme='dark' data-role='ejmtile' data-ej-textalignment='center' data-ej-text='{{>text}}' data-ej-tilesize='{{>iostilesize}}'>
+                        </div>
+                        </script>
+                        <script id="showcasetab" type='text/x-jsrender'>
+                        <div id='{{>id}}' data-ej-imageclass='e-m-icon-{{>id}}' data-ej-touchend='showdashboard' style='margin:5px;' data-ej-theme='dark' data-role='ejmtile' data-ej-textalignment='center' data-ej-text='{{>text}}' data-ej-tilesize='{{>phonetilesize}}'>
+                        </div>
+                        </script>
+                    </div>
+                </div>
+                <div id="allcontrolstab" class="allcontrols">
+                    <div data-role="ejmlistview" id="controllist" data-ej-allowscrolling="false" data-ej-databinding="true"
+                        data-ej-datasource="window.sampleslist" data-ej-fieldsettings="window.parentFields"
+                        data-ej-showheader="false" data-ej-ajaxbeforeload="showpopup" data-ej-ajaxsuccess="hidepopup"
+                        data-ej-touchend="showSample" data-ej-rendertemplate="true" data-ej-templateid="listviewtemplate">
+                    </div>
+                    <script id="listviewtemplate" type="text/jsrender">
+                      <a class="e-m-list-anchor e-m-remove-shadow e-m-margin" href="#">
+                        <div class="e-m-list-img e-m-rel e-m-user-select bgrect e-m-icon-{{>ImageClasses}}"></div>
+                        <span class="e-m-list-text e-m-rel e-m-user-select e-m-text">{{>text}}</span>
+                        {{if badgeText}}<span class="listbadge">{{>badgeText}}</span>{{/if}}</a>
+                    </script>
+                </div>
+                <div id="abouttab">
+                    <div class="aboutcontent">
+                        <div class="title">
+                            JavaScript Mobile
+                        </div>
+                        <div class="content">
+                            Essential Studio for Javascript Mobile contains all the controls you need to build
+                            line-of-business mobile applications including charts,gauges,bar codes,editors and
+                            much more.
+                            <br />
+                            <br />
+                            <div class="versiontext">
+                                Version 13.1.0.26
+                            </div>
+                            <br />
+                            <div class="contact">
+                                Contact Us
+                            </div>
+                            <div class="anchor">
+                                <a href="http://www.syncfusion.com" data-ej-appajax="false">http://www.syncfusion.com</a>
+                            </div>
+                            <div class="anchor">
+                                <a href="mailto:support@syncfusion.com" data-ej-appajax="false">support@syncfusion.com</a>
+                            </div>
+                            <br />
+                            <div class="bottom">
+                                1-888-9DOTNET
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="ejmtab" id="tabitem" data-ej-allowscrolling="true" data-ej-touchend="tabselect"
+                    data-ej-android-position="normal">
+                    <ul>
+                        <li data-ej-ios7-imageclass="e-m-icon-showcase" data-ej-href="#showcasetabwrapper"
+                            data-ej-text='Showcase'></li>
+                        <li data-ej-ios7-imageclass="e-m-icon-allcontrols" data-ej-href="#allcontrolstab"
+                            data-ej-text='All Controls'></li>
+                        <li data-ej-ios7-imageclass="e-m-icon-about" data-ej-href="#abouttab" data-ej-text='About'>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="tabletappview">
+            <div class="tabletlayout">
+                <div data-role="ejmheader" id="showcaseheader" data-ej-position="fixed" data-ej-title="Essential JS Mobile"
+                    data-ej-theme="light">
+                </div>
+                <div id="androidheader" data-role="ejmtoolbar" data-ej-android-title="Essential JS Mobile"
+                    data-ej-android-showtitleicon="true" data-ej-android-titleiconurl="themes/sample/azure-logo.png"
+                    data-ej-rendermode="android" data-ej-position="normal">
+                </div>
+                <div id="windowsheader" data-ej-enabletitle="false" data-ej-templateid="headertemplate"
+                    data-ej-position="normal" data-role="ejmheader" data-ej-rendermode="windows">
+                </div>
+                <div id="headertemplate" class="wintitle">
+                    <span class="winsmallfont">Essential JS</span><span class="winlargefont">Mobile</span>
+                </div>
+                <div id="showcasewrapper">
+                    <div class="winsamplewrap">
+                        <div id="samplestile">
+                            <div class="leftpadding row-fluid heading1">
+                                Showcase
+                            </div>
+                            <div id="topnavwrapper" class="row  topnav row-fluid">
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controlstile">
+                            <div class="leftpadding row-fluid heading1">
+                                All Controls
+                            </div>
+                            <div id="controlsgrid" class="leftpadding bottomnav container-fluid group">
+                                <div id="controlsgridscroller" class="column">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="PageScroll">
+                </div>
+                <div id='showcasescroll'>
+                </div>
+                <div id="aboutmenu">
+                </div>
+                <div id="aboutdialog">
+                </div>
+                <script id="tiletemplate" type="text/x-jsrender">			
+                    <div id='{{>text}}' data-ej-imageclass='e-m-icon-{{>text.toLowerCase()}}' data-role='ejmtile' data-ej-tilesize='small' data-ej-touchend='showSample' data-ej-text='{{>text}}'>
+                    {{if badgeText}}<div class="e-m-tile-badge">{{>badgeText}}</div>{{/if}}
+                    </div>
+                </script>
+                <script id="windowstiletemplate" type="text/x-jsrender">
+                    <div id='{{>text}}' data-ej-imageclass='e-m-icon-{{>text.toLowerCase()}}' data-role='ejmtile' style="background: #86ba35;margin:5px;" data-ej-theme="dark" data-ej-tilesize='medium' data-ej-touchend='showSample' data-ej-text='{{>text}}'>
+                    {{if badgeText}}<div class="e-m-tile-badge">{{>badgeText}}</div>{{/if}}
+                    </div>
+                </script>
+                <script id="dashboardtemplate" type='text/x-jsrender'>
+                    <div id='{{>id}}' data-ej-imageclass='e-m-icon-{{>id}}' data-ej-touchend='showdashboard' data-ej-theme="dark" data-role='ejmtile' data-ej-textalignment='center' data-ej-text='{{>text}}' data-ej-tilesize='{{>tilesize}}'>
+                    </div>
+                </script>
+                <script id="windowsdashboardtemplate" type='text/x-jsrender'>
+                    <div id='{{>id}}' data-ej-imageclass='e-m-icon-{{>id}}' data-ej-touchend='showdashboard' style='margin:5px' data-ej-theme="dark" data-role='ejmtile' data-ej-textalignment='center' data-ej-text='{{>text}}' data-ej-tilesize='{{>windowstilesize}}'>
+                    </div>
+                </script>
+                <script id="aboutcontent" type='text/x-jsrender'>
+                    <div id="aboutcontent">
+                        <div class="title">
+                            JavaScript Mobile
+                        </div>
+                        <div class="content">
+                            Essential Studio for Javascript Mobile contains all the controls you need to build
+                            line-of-business mobile applications including charts,gauges,bar codes,editors and
+                            much more.
+                            <br />
+                            <br />
+                            <div class="versiontext">
+                                Version 13.1.0.26
+                            </div>
+                            <br />
+                            <div class="contact">
+                                Contact Us
+                            </div>
+                            <div class="anchor">
+                                <a href="http://www.syncfusion.com" data-ej-appajax="false">http://www.syncfusion.com</a>
+                            </div>
+                            <div class="anchor">
+                                <a href="mailto:support@syncfusion.com" data-ej-appajax="false">support@syncfusion.com</a>
+                            </div>
+                            <br />
+                            <div class="bottom">
+                                1-888-9DOTNET
+                            </div>
+                        </div>
+                    </div>
+                </script>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.module = angular.module("syncApp", ['ejangular']);
+    </script>
+    <script type="text/javascript" src="scripts/samplebrowser.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile - RangeNavigator - Numeric Type</title>
+    <link rel="stylesheet" href="../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../themes/responsive.css" />
+    <link rel="stylesheet" href="../themes/ej.showcase.min.css" />
+    <script type="text/javascript" src="../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/support.js"></script>
+    <script type="text/javascript" src="../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/samplebrowser.js"></script>
+</head>
+<body>
+    <div style="height: inherit">
+        <div id="chartcontainer" data-role="ejmchart">
+        </div>
+        <div id="range" data-role="ejmrangenavigator">
+        </div>
+    </div>
+    <script>
+    
+      function ChartLoad() {
+
+        $("#chartcontainer").ejChart(
+                    {
+					   primaryXAxis:
+                       {
+					   font: { size: '10px'}
+					   },
+                        primaryYAxis:
+                       {
+					       range:{min:50, max:150, interval:50},
+                           font: { size: '10px'}
+                       },
+                        crosshair: {
+                            visible: true,
+                            marker:
+                           {
+                               shape: 'circle',
+
+                               size:
+                               {
+                                   height: 9, width: 9
+                               },
+                               visible: true,
+                               border: {width: 1 }
+                           },
+                            line: {
+                                color: 'transparent'
+                            }
+                        },
+
+                        series: [{
+                            type: 'line',
+                            name: 'Product X',
+                            enableAnimation: false, 
+							tooltip: {format: "#point.x#  : $#point.y#", visible: true},
+                            border: {width: 2 }
+                        },
+                            {
+                                type: 'line',
+                                name: 'Product Y',
+                                enableAnimation: false, 
+								tooltip: {format: "#point.x#  : $#point.y#", visible: true},
+                                border:{ width: 2 }
+                            }
+
+                        ],
+                        load: 'onchartload',
+                        title: {text: 'Stock Price Analysis', font: {size: '16px'}},
+                        size: { height: "360" },
+                        legend: { visible: false },
+						canResize: true,
+	                    loaded: "chartLoaded"
+                    });
+
+
+
+        $("#range").ejRangeNavigator({
+
+            enableDeferredUpdate: true,
+            padding: "15",
+            allowSnapping: false,
+            selectedRangeSettings: {
+                start: "100", end: "250"
+            },
+			rangPadding: 'none',
+            valueType: "numeric",
+            enableAutoResizing: false,
+            tooltipSettings: {
+                visible: false, backgroundColor: "gray", tooltipDisplayMode: "ondemand",
+               
+                    font: {
+                        color: 'white',
+                        family: 'Segoe UI',
+                        style: 'Normal',
+                        size: '12px',
+                        opacity: 1,
+                        weight: 'regular'
+                    }
+               
+            },
+
+            series: [
+                            {
+
+                                name: 'Product A',
+                                enableAnimation: false,
+                                type: 'line',
+                                //dataSource:data.Open, xName: "XValue", yName: "YValue",
+								opacity: 0.5, fill: '#69D2E7',
+                                border: {color: 'transparent', width: 2 }
+
+                            },
+
+            ],
+
+            seriesSettings: {
+                type: 'column', enableAnimation: false,
+            },
+
+
+            
+            navigatorstyleSettings: {
+                selectedregioncolor: "lightgray",
+                unselectedregioncolor: [{ color: "black", colorstop: "20%" }, { color: "white", colorstop: "100%" }],
+                thumbcolor: "black",
+                thumbradius: 13,
+                background: "transparent",
+                border: { color: "transparent", stroke: 0 },
+                majorgridlinestyle: { color: "black", visible: true },
+                minorgridlinestyle: { color: "black", visible: true },
+            },
+
+            rangeChanged: 'onchartloaded',
+            load: 'loadingdata'
+
+
+        });
+
+
+    }
+	
+      var data;
+
+      function onchartload(sender) {
+          
+         if (window.theme) {
+                if (window.theme[1] == "light")
+                    sender.model.theme = "flatlight"
+                else
+                    sender.model.theme = "flatdark"
+            }
+            else {   
+                if (ej.isDevice()) {                            // device
+				    if (ej.isWindows() && ej.isMobile())        // windows mobile
+                       sender.model.theme = "flatdark"
+					else
+					   sender.model.theme = "flatlight"         // windows tablet
+                }
+				else if(ej.isWindows())                         // windows desktop
+                       sender.model.theme = "flatdark"
+            }
+          data = GetData();
+          sender.model.series[0].dataSource = data.Open;
+          sender.model.series[0].xName = "XValue";
+          sender.model.series[0].yName = "YValue";
+          sender.model.series[1].dataSource = data.Close;
+          sender.model.series[1].xName = "XValue";
+          sender.model.series[1].yName = "YValue";
+      }
+
+      function GetData() {
+          var series1 = [];
+          var series2 = [];
+          var value = 100;
+          var value1 = 120;
+          for (var i = 0; i < 351; i++) {
+
+              if (Math.random() > .5) {
+                  value += Math.random();
+                  value1 += Math.random();
+              } else {
+                  value -= Math.random();
+                  value1 -= Math.random();
+              }
+              var point1 = { XValue: i, YValue: value };
+              var point2 = { XValue: i, YValue: value1 };
+              series1.push(point1);
+              series2.push(point2);
+          }
+
+          data = { Open: series1, Close: series2 };
+          return data;
+      }
+
+      function loadingdata(sender) {
+          
+         if (window.theme) {
+                if (window.theme[1] == "light")
+                    sender.model.theme = "flatlight"
+                else
+                    sender.model.theme = "flatdark"
+            }
+            else {   
+                if (ej.isDevice()) {                            // device
+				    if (ej.isWindows() && ej.isMobile())        // windows mobile
+                       sender.model.theme = "flatdark"
+					else
+					   sender.model.theme = "flatlight"         // windows tablet
+                }
+				else if(ej.isWindows())                         // windows desktop
+                       sender.model.theme = "flatdark"
+            }
+          data = GetData();
+          sender.model.series[0].dataSource = data.Open;
+          sender.model.series[0].xName = "XValue";
+          sender.model.series[0].yName = "YValue";
+      }
+   var loadChart= false;
+   function chartLoaded(sender){
+     if (loadChart) {
+       loadChart= false;
+	   var range = $("#range").data("ejRangeNavigator");
+	   range.model.sizeSettings = {};
+	   range.model.sizeSettings.width = $("#chartcontainer").width().toString();
+	   $("#range").ejRangeNavigator("redraw");
+	   }else loadChart= true;
+   }
+      var flag = false;
+      function onchartloaded(sender) {
+          if (!flag) {
+              flag = true;
+          } else {
+              var chartobj = $("#chartcontainer").data("ejChart");
+
+              if (chartobj != null) {
+                  chartobj.model.primaryXAxis.zoomPosition = sender.zoomPosition;
+                  chartobj.model.primaryXAxis.zoomFactor = sender.zoomFactor;
+              }
+              $("#chartcontainer").ejChart("redraw");
+          }
+      }
+</script>
+</body>
+</html>

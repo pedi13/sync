@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for JavaScript Mobile - Button - Toggle Button</title>
+    <link rel="stylesheet" href="../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../themes/responsive.css" />
+    <link rel="stylesheet" href="../themes/ej.showcase.min.css" />
+    <script type="text/javascript" src="../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/support.js"></script>
+    <script type="text/javascript" src="../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../scripts/samplebrowser.js"></script>
+</head>
+<body style="-ms-touch-action=none;">
+    <div class="toggledivpad">
+        <div>
+            <div data-role="ejmlistview" id="togglelistbox" data-ej-allowscrolling="false" data-ej-showheader="false" data-ej-enablegrouplist="true"
+                data-ej-preventselection="true" data-ej-windows-preventskew="true">
+                <ul data-ej-grouplisttitle="Privacy">
+                    <li data-ej-rendertemplate="true" data-ej-templateid="item1"></li>
+                    <li data-ej-rendertemplate="true" data-ej-templateid="item2"></li>
+                    <li data-ej-rendertemplate="true" data-ej-templateid="item3"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script id="item1" type="text/x-jsrender">
+                        <div id="toggle1" class="togglelistpad">
+                            <div class="togglesamtext">
+                                Air Plane
+                            </div>
+                            <div class="togglesamele">
+                                <div data-role="ejmtogglebutton" id="togglebtn1" data-ej-togglestate="true">
+                                </div>
+                            </div>
+                        </div>
+    </script>
+    <script id="item2" type="text/x-jsrender">					
+                        <div id="toggle2" class="togglelistpad">
+                            <div class="togglesamtext">
+                                WIFI
+                            </div>
+                            <div class="togglesamele">
+                                <div data-role="ejmtogglebutton" id="togglebtn2" data-ej-togglestate="false">
+                                </div>
+                            </div>
+                        </div>
+    </script>
+    <script id="item3" type="text/x-jsrender">						
+                        <div id="toggle3" class="togglelistpad">
+                            <div class="togglesamtext">
+                                Bluetooth
+                            </div>
+                            <div class="togglesamele">
+                                <div data-role="ejmtogglebutton" id="togglebtn3" data-ej-togglestate="true">
+                                </div>
+                            </div>
+                        </div>
+    </script>
+</body>
+</html>

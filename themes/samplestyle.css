@@ -1,0 +1,2346 @@
+.col-md-3.col-padding
+{
+    padding-bottom: 15px;
+}
+#aboutmenu_overlay, #aboutmenu {
+   display:none;
+}
+.showcase.appview {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -moz-transform:translateZ(0);
+}
+@media only screen and (min-width:770px)
+{
+    body .e-m-windows.e-m-dark
+    {
+        color: white;
+    }
+
+    .appview .e-m-android #apidialogcontent td.col-md-3
+    {
+        padding-bottom: 10px;
+        padding-right: 50px;
+        padding-top: 10px;
+        text-align: left;
+        width: 70%;
+    }
+    .chkboxdisplay td
+    {
+        padding-bottom: 10px;
+    }
+    /* Accordion Start */
+    .appview .e-m-android .name-panel, .appview .e-m-android .time-panel
+    {
+        color: #4DA6C4;
+    }
+    .appview .time-panel
+    {
+        float: right;
+        color: #007AFF;
+        font-weight: bold;
+    }
+    .appview .content-panel
+    {
+        font-size: 14px;
+    }
+    .appview .name-panel
+    {
+        font-size: 15px;
+        font-weight: bold;
+        color: #007AFF;
+        padding-bottom: 5px;
+    }
+    .appview .message-title
+    {
+        font-weight: bold;
+        padding-bottom: 5px;
+    }
+    .appview .text-panel
+    {
+        padding-bottom: 5px;
+    }
+    .appview .border-panel
+    {
+        border-bottom-width: 1px;
+        border-bottom-color: #C0C0C0;
+        border-bottom-style: solid;
+        padding-top: 5px;
+    }
+    /* Accordion End */
+
+    /* Autocomplete Start */
+
+    .e-m-ios7 .sb-acc-sample
+    {
+        padding: 10px;
+    }
+
+    /* Autocomplete End */
+
+    /* Button Start */
+
+    .btncenter
+    {
+        height: 75%;
+        padding: 3%;
+    }
+    .btnsamtitle
+    {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .groupbtncenter
+    {
+        height: 75%;
+        padding: 2%;
+        margin-top: 20px;
+    }
+    #grpbuttonlist
+    {
+    margin-top: 20px;
+    }
+
+    .grpitemhide
+    {
+        display: none;
+    }
+
+    .appview.e-m-tablet .chkboxdisplay
+    {
+        display: inline-block;
+        padding-top: 10px;
+        padding: 5%;
+        width: 220px;
+    }
+
+    .appview.e-m-mobile .chkboxdisplay
+    {
+        display: inline-block;
+        padding: 15px;
+        width: 220px;
+    }
+    .chkboxdisplay td label
+    {
+        float: left;
+        margin-bottom: 0px;
+    }
+    .e-m-windows .chkboxdisplay td label
+    {
+        margin-bottom: 5px;
+    }
+    .e-m-ios7 .chkboxdisplay td label
+    {
+        position: relative;
+        top: 2px;
+    }
+
+    #second-table
+    {
+        margin-right: 8%;
+    }
+
+    .toggledivpad
+    {
+        padding: 1%;
+    }
+
+    .togglelistpad
+    {
+        padding: 20px 0px;
+    }
+    .togglesamtext
+    {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .togglesamele
+    {
+        display: inline-block;
+        float: right;
+        margin-right: 10px;
+    }
+
+    /* Button End */
+
+    /* DatePicker Start */
+
+    /* DatePicker End */
+
+    /* Dialog Start */
+
+    /* Dialog End */
+
+    /* Grid Start */
+
+    #sliderCurrentPage.e-m-slider, #sliderPageSize.e-m-slider
+    {
+        margin-left: 10px;
+    }
+    #settings .col-md-3.sliderapispan
+    {
+        padding-top: 10px;
+    }
+    /* Grid End */
+
+    .selectOption
+    {
+        width: 50%;
+    }
+
+    .sample_grid
+    {
+        position: relative;
+        padding: 10px;
+    }
+    /* Grid End */
+
+    /*Listbox Start*/
+    #slider.e-m-slider
+    {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .e-m-android #slider.e-m-slider
+    {
+        margin-right: 30px;
+    }
+    .listboxsample .e-m-list [class*="icn-"]:before
+    {
+        color: gray;
+        font-size: 26px;
+        font-family: ejmmobilefonts;
+        position: relative;
+        top: 1px;
+        left: 5px;
+    }
+    .e-m-windows .listboxsample .e-m-list [class*="icn-"]:before
+    {
+        top: 3px;
+    }
+    .listboxsample .e-m-tablet .e-m-list.e-m-state-active [class*="icn-"]:before
+    {
+        color: white;
+    }
+
+    .e-m-android .listboxsample .e-m-list .icn-WiFi:before
+    {
+        top: 0px;
+    }
+
+    .listboxsample .e-m-android .e-m-list [class*="icn-"]:before
+    {
+        color: gray;
+        top: 3px;
+    }
+
+    .listboxsample .e-m-windows .e-m-list [class*="icn-"]:before
+    {
+        left: 0px;
+    }
+
+    .e-m-ios7 .icn-Airplan:before
+    {
+        content: "\e72a";
+    }
+    .e-m-ios7 .listboxsample .e-m-list .icn-WiFi:before
+    {
+        content: "\e723";
+        top: 3px;
+    }
+    .e-m-ios7 .icn-Notification:before
+    {
+        content: "\e727";
+    }
+    .e-m-ios7 .icn-Location:before
+    {
+        content: "\e728";
+    }
+    .e-m-ios7 .listboxsample .e-m-list .icn-Sound:before
+    {
+        content: "\e725";
+        top: 3px;
+    }
+    .e-m-ios7 .listboxsample .e-m-list .icn-Brightness:before
+    {
+        content: "\e729";
+        top: 3px;
+    }
+    .e-m-ios7 .listboxsample .e-m-list .icn-Wallpaper:before
+    {
+        content: "\e724";
+        top: 3px;
+    }
+    .e-m-ios7 .listboxsample .e-m-list .icn-General:before
+    {
+        content: "\e726";
+        top: 3px;
+    }
+
+
+    .e-m-android .icn-Airplan:before
+    {
+        content: "\e732";
+    }
+    .e-m-android .icn-WiFi:before
+    {
+        content: "\e72b";
+    }
+    .e-m-android .icn-Notification:before
+    {
+        content: "\e72f";
+    }
+    .e-m-android .icn-Location:before
+    {
+        content: "\e730";
+    }
+    .e-m-android .icn-Sound:before
+    {
+        content: "\e72d";
+    }
+    .e-m-android .icn-Brightness:before
+    {
+        content: "\e731";
+    }
+    .e-m-android .icn-Wallpaper:before
+    {
+        content: "\e72c";
+    }
+    .e-m-android .icn-General:before
+    {
+        content: "\e72e";
+    }
+
+    .e-m-windows .icn-Airplan:before, .e-m-flat .icn-Airplan:before
+    {
+        content: "\e722";
+    }
+    .e-m-windows .icn-WiFi:before, .e-m-flat .icn-WiFi:before
+    {
+        content: "\e718";
+    }
+    .e-m-windows .listboxsample .e-m-list .icn-Notification:before, .e-m-flat .listboxsample .e-m-list .icn-Notification:before
+    {
+        content: "\e71d";
+        top: 6px;
+    }
+    .e-m-windows .icn-Location:before, .e-m-flat .icn-Location:before
+    {
+        content: "\e720";
+    }
+    .e-m-windows .icn-Sound:before, .e-m-flat .icn-Sound:before
+    {
+        content: "\e71b";
+    }
+    .e-m-windows .icn-Brightness:before, .e-m-flat .icn-Brightness:before
+    {
+        content: "\e721";
+    }
+    .e-m-windows .icn-Wallpaper:before, .e-m-flat .icn-Wallpaper:before
+    {
+        content: "\e71a";
+    }
+    .e-m-windows .icn-General:before, .e-m-flat .icn-General:before
+    {
+        content: "\e71c";
+    }
+
+    /*list sample base styles*/
+
+    .listboxsample
+    {
+        position: relative;
+        width: 100%;
+    }
+
+    .e-m-windows #templatelistcontainer
+    {
+        padding-top: 0px;
+    }
+
+    .e-m-windows .nonepadding
+    {
+        padding-left: 0px;
+    }
+
+    #templatelist .e-m-lv.e-m-windows.e-m-mobile.e-m-dark .e-m-grouplist
+    {
+        background: none repeat scroll 0 0 #1E1E1E;
+    }
+
+    #templatelist .e-m-lv .e-m-list-div
+    {
+        margin-left: 0px;
+    }
+    /* List Template Styles*/
+
+    /* List Template Styles*/
+
+    #templatelist .designationstyle
+    {
+        float: right;
+        font-size: 12px;
+        position: relative;
+        right: 25px;
+        padding-right: 5px;
+    }
+
+    #templatelist .aboutstyle
+    {
+        display: block;
+        font-size: 14px;
+        line-height: 20px;
+        overflow: hidden;
+        padding-right: 10px;
+        padding-top: 1px;
+        position: relative;
+        text-align: justify;
+        word-wrap: break-word;
+    }
+
+    .templatetext
+    {
+        font-weight: bolder;
+        position: relative;
+        font-size: 17px;
+    }
+
+    .listrightdiv
+    {
+        left: 20px;
+        padding-top: 6px;
+        position: relative;
+    }
+
+    .e-m-ios7 .listrightdiv
+    {
+        left: 15px;
+    }
+
+    #templatelist .e-m-lv .e-m-list .brooke
+    {
+        background-image: url('../themes/sample/templatelist/brooke.png');
+    }
+
+    #templatelist .e-m-lv .e-m-list .claire
+    {
+        background-image: url('../themes/sample/templatelist/claire.png');
+    }
+
+    #templatelist .e-m-lv .e-m-list .erik
+    {
+        background-image: url('../themes/sample/templatelist/erik.png');
+    }
+
+    #templatelist .e-m-lv .e-m-list .grace
+    {
+        background-image: url('../themes/sample/templatelist/grace.png');
+    }
+
+    #templatelist .e-m-lv .e-m-list .jacob
+    {
+        background-image: url('../themes/sample/templatelist/jacob.png');
+    }
+
+    #templatelist .e-m-lv.e-m-light .e-m-list.e-m-state-default .listrightdiv, .e-m-android #templatelist .e-m-lv.e-m-light .e-m-list.e-m-state-active .listrightdiv
+    {
+        color: #000000;
+    }
+
+    #templatelist .e-m-lv.e-m-dark .e-m-list .listrightdiv, #templatelist .e-m-lv.e-m-light .e-m-list.e-m-state-active .listrightdiv
+    {
+        color: #FFFFFF;
+    }
+
+    .jacob, .grace, .erik, .claire, .brooke
+    {
+        background-repeat: no-repeat;
+        border: 1px solid #e5e5e5;
+        float: left;
+        height: 52px;
+        left: 10px;
+        padding-left: 8px;
+        position: relative;
+        width: 54px;
+    }
+
+    .e-m-windows .jacob, .e-m-windows .grace, .e-m-windows .erik, .e-m-windows .claire, .e-m-windows .brooke
+    {
+        border: 0.5px solid #E5E5E5;
+    }
+
+    .e-m-ios7 .jacob, .e-m-ios7 .grace, .e-m-ios7 .erik, .e-m-ios7 .claire, .e-m-ios7 .brooke
+    {
+        left: 5px;
+    }
+
+    .cont-bg
+    {
+        height: 60px;
+        width: 100%;
+        padding: 4px 0px;
+    }
+
+    .e-m-ios7 .cont-bg
+    {
+        height: 61px;
+    }
+
+    .e-m-android .cont-bg
+    {
+        padding: 4px 0px 2px 0px;
+    }
+
+    /* Listbox API styles*/
+    .apiheader
+    {
+        padding-top: 5px;
+    }
+
+    .e-m-tablet .apiborder
+    {
+        padding: 20px;
+    }
+
+    .apicontent
+    {
+        height: 272px;
+    }
+
+    /*Listbox End*/
+
+    /* Menu Start */
+    .appview.e-m-ios .e-m-menu-container
+    {
+        color: #454850;
+    }
+
+    .menu-align-center
+    {
+        text-align: center;
+    }
+    /* Menu End */
+
+    /* Progressbar Start */
+    #progressSample
+    {
+        position: relative;
+        text-align: center;
+        top: 75px;
+    }
+
+    .progressEventLog
+    {
+        height: 125px;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .e-m-ios7 .progressbar_event div.sampebutton input
+    {
+        width: 90px;
+    }
+    .e-m-android .progressbar_event div.sampebutton, .e-m-windows .progressbar_event div.sampebutton
+    {
+        width: 110px;
+    }
+    /* Progressbar End */
+
+    /* Rating Start */
+    .rating-default
+    {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .rating-parent
+    {
+        margin-top: 10%;
+    }
+    .rating-google
+    {
+        background-image: url("../themes/sample/google.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 130px;
+    }
+    .rating-child
+    {
+        text-align: center;
+    }
+    /* Rating End */
+
+    /* Rotator Start */
+    .scrollviewlabel
+    {
+        display: block;
+        margin-bottom: 5px;
+        line-height: 20px;
+    }
+    #scrollparent
+    {
+        margin: auto;
+        padding-top: 10px;
+    }
+
+    .photo
+    {
+        background-position: center center;
+        background-repeat: no-repeat; 
+        height: 100%;
+        width: 96%;
+        margin: auto;
+    }
+    .e-m-rotatorheader .e-m-vertical .photo
+    {
+        height: 96%;
+    }
+    .photo1
+    {
+        background-image: url(../themes/sample/rotator/nature.jpg);
+    }
+    .photo2
+    {
+        background-image: url(../themes/sample/rotator/bird.jpg);
+    }
+    .photo3
+    {
+        background-image: url(../themes/sample/rotator/snowfall.jpg);
+    }
+    .photo4
+    {
+        background-image: url(../themes/sample/rotator/sculpture.jpg);
+    }
+    .photo5
+    {
+        background-image: url(../themes/sample/rotator/seaview.jpg);
+    }
+    .photo6
+    {
+        background-image: url(../themes/sample/rotator/tablet.jpg);
+    }
+    .photo7
+    {
+        background-image: url(../themes/sample/rotator/rose.jpg);
+    }
+    .photo8
+    {
+        background-image: url(../themes/sample/rotator/green.jpg);
+    }
+    .photo9
+    {
+        background-image: url(../themes/sample/rotator/nature.jpg);
+    }
+    .photo10
+    {
+        background-image: url(../themes/sample/rotator/snowfall.jpg);
+    }
+    .photo11
+    {
+        background-image: url(../themes/sample/rotator/rose.jpg);
+    }
+    .photo12
+    {
+        background-image: url(../themes/sample/rotator/wheat.jpg);
+    }
+    .photo13
+    {
+        background-image: url(../themes/sample/rotator/snow.jpg);
+    }
+    .photo14
+    {
+        background-image: url(../themes/sample/rotator/bread.jpg);
+    }
+    .photo15
+    {
+        background-image: url(../themes/sample/rotator/card.jpg);
+    }
+
+    /* Rotator End */
+
+    /* Slider Start */
+    .sb-slidersample
+    {
+        margin: auto;
+        text-align: left;
+        padding: 40px;
+    }
+    .sb-header
+    {
+        font-size: 24px;
+    }
+
+    .sb-slidecaption
+    {
+        font-size: 100%;
+    }
+
+    .sb-slidelabel
+    {
+        font-size: 95%;
+        float: right;
+    }
+    .sb-slidercontent .e-m-slider
+    {
+        margin: 0px;
+    }
+    .sb-emi
+    {
+        font-size: 90%;
+        text-align: center;
+    }
+
+    .sb-minlabel
+    {
+        font-size: 15px;
+        float: left;
+    }
+
+    .sb-maxlabel
+    {
+        font-size: 15px;
+        float: right;
+    }
+
+    .sb-slider .e-m-slider
+    {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    /* Slider End */
+    /*ProgressBar Start*/
+    #progressBar_eve
+    {
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    /*ProgressBar End*/
+    /* Tab Start*/
+
+    .e-m-windows.e-m-tablet #tabdefault_wrapper .e-m-content, .e-m-windows.e-m-tablet #tablod_wrapper .e-m-content, .e-m-windows.e-m-tablet #tabsamp_wrapper .e-m-content
+    {
+        padding-left: 25px;
+    }
+    #tabdefault_wrapper.e-m-windows.e-m-tablet .e-m-lv .e-m-list .e-m-list-text, #tablod_wrapper.e-m-windows.e-m-tablet .e-m-lv .e-m-list .e-m-list-text, #tabsamp_wrapper.e-m-windows.e-m-tablet .e-m-lv .e-m-list .e-m-list-text
+    {
+        left: 0px;
+    }
+    .e-m-ios7 .e-m-tabitem.e-m-state-default [class*="e-m-icon-"]:before
+    {
+        color: #9C9C9C;
+    }
+    /*.e-m-ios7 .e-m-tabitem [class*="icn-"]:before
+        {
+            vertical-align: text-top;
+            line-height: 14px;
+            margin-top: 1px;
+        }*/
+    .e-m-ios7 .e-m-tabitem.e-m-state-active [class*="e-m-icon-"]:before
+    {
+        color: #0079FF;
+    }
+    .e-m-icon-movies:before
+    {        
+        font-size: 28px;
+        top: 7px;
+        position: relative;
+        right: 3px;
+        font-family: ejmmobilefonts;
+    }
+
+    .e-m-icon-music:before
+    {        
+        font-size: 19px;
+        top: 3px;
+        right: 2px;
+        font-family: ejmmobilefonts;
+        position: relative;
+    }
+
+    .e-m-icon-favourites:before
+    {        
+        font-size: 24px;
+        right: 3px;
+        position: relative;
+        top: 5px;
+        font-family: ejmmobilefonts;
+    }
+
+    .e-m-icon-playlist:before
+    {        
+        font-size: 20px;
+        font-family: ejmmobilefonts;
+        position: relative;
+        top: 4px;
+        left: -1px;
+    }
+
+    .e-m-icon-featured:before
+    {        
+        font-size: 26px;
+        right: 3px;
+        top: 8px;
+        font-family: ejmmobilefonts;
+        position: relative;
+    }
+
+    .e-m-icon-topcharts:before
+    {        
+        font-size: 21px;
+        right:3px;
+        top: 5px;
+        font-family: ejmmobilefonts;
+        position: relative;
+    }
+
+    .e-m-icon-purchased:before
+    {        
+        font-size: 22px;
+        font-family: ejmmobilefonts;
+        position: relative;
+        top: 6px;
+        right:3px;
+    }
+
+    .e-m-icon-updates:before
+    {        
+        font-size: 21px;
+        font-family: ejmmobilefonts;
+        position: relative;
+        top: 5px;
+        right:3px;
+    }
+
+    .e-m-icon-fastfoods:before
+    {        
+        font-size: 22px;
+        font-family: ejmmobilefonts;
+        position: relative;
+        top: 8px;
+        right: 3px;
+    }
+
+    .e-m-icon-soups:before
+    {     
+        font-size: 24px;
+        right: 3px;
+        top: 8px;
+        position: relative;
+        font-family: ejmmobilefonts;
+    }
+
+    .e-m-icon-snacks:before
+    {     
+        font-size: 25px;
+        right: 3px;
+        top: 8px;
+        position: relative;
+        font-family: ejmmobilefonts;
+    }
+
+    .e-m-icon-beverages:before
+    {        
+        font-size: 22px;
+        right: 3px;
+        top: 8px;
+        position: relative;
+        font-family: ejmmobilefonts;
+    }
+    /* Tab End*/
+
+    /* Textbox Start*/
+
+    .textbox_sample label, .textbox_sample .errormesssage_def
+    {
+        text-align: left;
+    }
+
+    .textbox_sample .submitbutton
+    {
+        text-align: center;
+    }
+    ::-ms-reveal {
+    display: none;
+    }
+
+    /* Textbox End*/
+
+    /* Tileview start*/
+    .e-m-android .sample .e-m-tile-wrapper.e-m-tile-wrapper-small.e-m-android .e-m-child-tile .e-m-fontimage.e-m-tile-image
+    {
+        background-size: 48px 48px;
+    }
+    .sample.tileview
+    {
+        width: 600px;
+    }
+    .e-m-ios7.e-m-tablet #settings .container-fluid.sample .col-md-3.tilesettingsbadge
+    {
+        padding-right: 0px;
+        padding-bottom: 0px;
+    }
+    #tileapislider.e-m-slider
+    {
+        margin-left: 9px;
+    }
+    .e-m-ios7.e-m-tablet #settings .container-fluid.sample .col-md-3.tilesettingsslider
+    {
+        padding-left: 0px;
+    }
+    .sample.tileview .e-m-windows.e-m-tile.e-m-tile-wrapper.e-m-tile-wide .e-m-child-tile .e-m-tile-image:before
+    {
+        top: 15px;
+    }
+
+    #tileview .e-m-tile.e-m-tile-wrapper
+    {
+        margin: 4px;
+    }
+    #tileview
+    {
+        float: left;
+    }
+    .left
+    {
+        float: left;
+    }
+    .right
+    {
+        float: right;
+    }
+    #tilemed1.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-text.e-m-textalign-normal, #tilemed4.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-text.e-m-textalign-normal
+    {
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4);
+    }
+    #tilesm1.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e705";
+        color: #FFFFFF;
+        font-family: ejmmobilefonts;
+        font-size: 43px;
+        left: 10px;
+        position: absolute;
+        top: 27px;
+    }
+    #tilesm2.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e704";
+        color: #FFFFFF;
+        font-family: ejmmobilefonts;
+        font-size: 43px;
+        left: 15px;
+        position: absolute;
+        top: 31px;
+    }
+    #tilesm3.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e703";
+        color: #FFFFFF;
+        font-family: ejmmobilefonts;
+        font-size: 43px;
+        left: 7px;
+        position: absolute;
+        top: 31px;
+    }
+    #tilesm4.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e702";
+        color: #FFFFFF;
+        font-family: ejmmobilefonts;
+        font-size: 43px;
+        left: 10px;
+        position: absolute;
+        top: 31px;
+    }
+    .sample.tileview .e-m-tile.e-m-tile-wrapper.e-m-tile-medium .e-m-child-tile .e-m-tile-image:before
+    {
+        font-size: 50px;
+        color: #FFFFFF;
+        font-family: ejmmobilefonts;
+        left: 22px;
+        position: relative;
+        top: 63px;
+    }
+    #tilemed2.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e715";
+    }
+    #tilemed3.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e701";
+        font-size: 70px;
+        left: 41px;
+        position: relative;
+        top: 61px;
+    }
+
+    #tilemed5.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e6ab";
+        left: 30px;
+    }
+    #tilemed6.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e71e";
+        font-size: 40px;
+        left: 44px;
+    }
+    #tilemed7.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e717";
+        left: 37px;
+    }
+    .sample.tileview .e-m-tile.e-m-tile-wrapper.e-m-tile-wide .e-m-child-tile .e-m-tile-image:before
+    {
+        position: relative;
+        color: #FFFFFF;
+        font-family: ejmmobilefonts;
+        font-size: 65px;
+        left: 108px;
+        top: 63px;
+    }
+    #tilewide2.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e712";
+    }
+    #tilemed1.e-m-tile.e-m-tile-wrapper, #tilemed1.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile, #tilesm3.e-m-tile.e-m-tile-wrapper, #tilesm3.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile, #tilewide1.e-m-tile.e-m-tile-wrapper, #tilewide1.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile, #tilemed4.e-m-tile.e-m-tile-wrapper, #tilemed4.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile, #tilemed9.e-m-tile.e-m-tile-wrapper, #tilemed9.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile, #tilemed10.e-m-tile.e-m-tile-wrapper, #tilemed10.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #2B80EA;
+    }
+    #tilesm1.e-m-tile.e-m-tile-wrapper, #tilesm1.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile, #tilemed6.e-m-tile.e-m-tile-wrapper, #tilemed6.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile, #tilewide3.e-m-tile.e-m-tile-wrapper, #tilewide3.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #D04B2B;
+    }
+    #tilesm2.e-m-tile.e-m-tile-wrapper, #tilesm2.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #D79317;
+    }
+    #tilesm4.e-m-tile.e-m-tile-wrapper, #tilesm4.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #5E3AB3;
+    }
+    #tilemed2.e-m-tile.e-m-tile-wrapper, #tilemed2.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #91149A;
+    }
+    #tilemed3.e-m-tile.e-m-tile-wrapper, #tilemed3.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile, #tilemed11.e-m-tile.e-m-tile-wrapper, #tilemed11.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #009D00;
+    }
+    #tilemed8.e-m-tile.e-m-tile-wrapper, #tilemed8.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #71417D;
+    }
+    #tilemed5.e-m-tile.e-m-tile-wrapper, #tilemed5.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #EE8728;
+    }
+    #tilemed7.e-m-tile.e-m-tile-wrapper, #tilemed7.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #EEC714;
+    }
+    #tilewide2.e-m-tile.e-m-tile-wrapper, #tilewide2.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #4AA8DE;
+    }
+    .e-m-tile.e-m-tile-wrapper.e-m-ios .e-m-child-tile .e-m-tile-badge
+    {
+        z-index: 2;
+    }
+
+    .tiletdspacing
+    {
+        padding-bottom: 5px;
+        padding-right: 8px;
+        padding-top: 5px;
+    }
+
+    .secondrow
+    {
+        padding-top: 2px;
+    }
+
+    .lasttiletop
+    {
+        padding-top: 6px;
+    }
+
+    #tilewide1.e-m-tile.e-m-tile-wrapper.e-m-tile-wide
+    {
+        width: 268px;
+        padding: 0;
+    }
+
+
+    /* TileView End*/
+
+    /* Timepicker Start*/
+    #timepickerSample
+    {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    /* Timepicker End*/
+
+
+
+    /* Toggle Button Start*/
+    .sample.toggle-button-container
+    {
+        padding: 0px;
+    }
+
+    .toggle-text
+    {
+        float: left;
+    }
+
+    .e-m-windows .toggle-text, .e-m-android .toggle-text
+    {
+        color: #FFFFFF;
+    }
+
+    .e-m-ios .toggle-text
+    {
+        font-weight: bold;
+    }
+
+    .toggle-list-item
+    {
+        padding: 15px;
+    }
+
+    /* Toggle Button End*/
+
+    /*Barcode*/
+    #barcodeSample .e-barcode
+    {
+        margin: auto;
+    }    
+}
+@media only screen and (max-width:320px)
+{
+    #scrollparent
+    {
+        height: 320px;
+    }
+}
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape)
+{
+    #scrollparent
+    {
+        height: 400px;
+    }
+}
+@media only screen and (min-width : 568px) and (max-width : 1024px) and (orientation : portrait)
+{
+    #scrollparent
+    {
+        height: 500px;
+    }
+}
+@media only screen and (min-width:769px)
+{
+    #scrollparent
+    {
+        height: 350px;
+    }
+}
+@media only screen and (min-width : 310px) and (max-width : 850px) and (orientation : landscape)
+{
+    #default_rightscroller #scrollparent .e-m-ios7.e-m-rotator .e-m-abs.e-m-sv-pagerbottom
+    {
+        bottom: 8px;
+    }
+    #scrollparent
+    {
+        height: 190px;
+    }
+    .e-m-ios7  #scrollparent
+    {
+        margin-top:20px;
+        height: 230px;
+    }
+    #scrollparent .e-m-android.e-m-rotator .e-m-abs.e-m-sv-pagerbottom
+    {
+        bottom: -3px;
+    }
+
+    #scrollparent .e-m-ios7.e-m-rotator.e-m-rotatorheader .e-m-abs.e-m-sv-pagerbottom
+    {
+         bottom:0px;
+    }
+
+}
+@media only screen and (min-width : 310px) and (max-width : 850px) and (orientation : portrait)
+{
+    #scrollparent .e-m-ios7.e-m-rotator.e-m-rotatorheader .e-m-abs.e-m-sv-pagerbottom
+    {
+         bottom:20px;
+    }
+    #scrollparent
+    {
+        height: 360px;
+    }
+    #scrollparent .e-m-android.e-m-rotator .e-m-abs.e-m-sv-pagerbottom
+    {
+        bottom: -6px;
+    }
+    #scrollparent .e-m-rotator .e-m-sv-container
+    {
+    }
+    .photo
+    {
+        background-size: 100% 100%;
+    }
+
+    #scrollparent #rotatordefault .e-m-ios7.e-m-rotator .e-m-abs.e-m-sv-pagerbottom
+    {
+        bottom: 20px;
+    }
+}
+@media only screen and (max-width:769px)
+{
+    body .e-m-windows.e-m-dark
+    {
+        color: white;
+    }
+    .e-m-windows .windrawer
+    {
+        width: 34px;
+        height: 100px;
+        position: absolute;
+        background: url("sample/windrawer.png") no-repeat;
+        right: -20px;
+        top: -webkit-calc(50% - 50px);
+        top: -moz-calc(50% - 50px);
+        top: calc(50% - 50px);
+        z-index: 100003;
+    }
+    /*Accordion*/
+    .appview .e-m-android .name-panel, .appview .e-m-android .time-panel
+    {
+        color: #4DA6C4;
+    }
+    .appview .time-panel
+    {
+        float: right;
+        color: #007AFF;
+        font-weight: bold;
+    }
+    .appview .content-panel
+    {
+        font-size: 14px;
+    }
+    .appview .name-panel
+    {
+        font-size: 15px;
+        font-weight: bold;
+        color: #007AFF;
+        padding-bottom: 5px;
+    }
+    .appview .message-title
+    {
+        font-weight: bold;
+        padding-bottom: 5px;
+    }
+    .appview .text-panel
+    {
+        padding-bottom: 5px;
+    }
+    .appview .border-panel
+    {
+        border-bottom-width: 1px;
+        border-bottom-color: #C0C0C0;
+        border-bottom-style: solid;
+        padding-top: 5px;
+    }
+    /*Accordion*/
+
+
+    /*AutoComplete*/
+    .e-m-ios7 .sb-acc-sample
+    {
+        padding: 0px;
+    }
+    /*AutoComplete*/
+
+
+    /*Button*/
+
+    .btncenter
+    {
+        height: 75%;
+        padding: 3%;
+    }
+
+    .btnsamtitle
+    {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .groupbtncenter
+    {
+        height: 75%;
+        padding: 2%;
+        margin-top: 20px;
+    }
+    #grpbuttonlist
+    {
+    margin-top: 20px;
+    }
+
+    .grpitemhide
+    {
+        display: none;
+    }
+
+    #gblistbox.e-m-light .gblistbg
+    {
+        background: none repeat scroll 0 0 #F7F7F7;
+    }
+
+    #gblistbox.e-m-dark .gblistbg
+    {
+        background: none repeat scroll 0 0 #141414;
+    }
+
+    #gblistbox1.e-m-light .gblistbg
+    {
+        background: none repeat scroll 0 0 #F7F7F7;
+    }
+
+    #gblistbox1.e-m-dark .gblistbg
+    {
+        background: none repeat scroll 0 0 #141414;
+    }
+
+    #gblistbox2.e-m-light .gblistbg
+    {
+        background: none repeat scroll 0 0 #F7F7F7;
+    }
+
+    #gblistbox2.e-m-dark .gblistbg
+    {
+        background: none repeat scroll 0 0 #141414;
+    }
+
+    .appview.e-m-tablet .chkboxdisplay
+    {
+        display: inline-block;
+        padding-top: 10px;
+        padding: 5%;
+        width: 220px;
+    }
+
+    .appview.e-m-mobile .chkboxdisplay
+    {
+        display: inline-block;
+        padding: 15px;
+        width: 220px;
+    }
+    .chkboxdisplay td label
+    {
+        float: left;
+        margin-bottom: 0px;
+    }
+    .e-m-windows .chkboxdisplay td label
+    {
+        margin-bottom: 5px;
+    }
+    .e-m-ios7 .chkboxdisplay td label
+    {
+        position: relative;
+        top: 2px;
+    }
+
+    #second-table
+    {
+        margin-right: 8%;
+    }
+
+    .toggledivpad
+    {
+        padding: 1%;
+    }
+
+    .togglelistpad
+    {
+        padding: 20px 0px;
+    }
+
+    .togglesamtext
+    {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .togglesamele
+    {
+        display: inline-block;
+        float: right;
+        margin-right: 10px;
+    }
+
+    /*Button*/
+
+
+    /*DatePicker*/
+    /*DatePicker*/
+
+
+    /*Dialog*/
+    /*Dialog*/
+
+    /*Listbox Start*/
+    .e-m-windows #templatelist .e-m-list-hdr
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #slider.e-m-slider
+    {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .listboxsample .e-m-list [class*="icn-"]:before
+    {
+        color: gray;
+        font-size: 26px;
+        font-family: ejmmobilefonts;
+        position: relative;
+        top: 5px;
+        left: 5px;
+    }
+
+    .e-m-android .listboxsample .e-m-list .icn-WiFi:before
+    {
+        top: 0px;
+    }
+
+    .e-m-ios7 .icn-Airplan:before
+    {
+        content: "\e72a";
+    }
+    .e-m-ios7 .icn-WiFi:before
+    {
+        content: "\e723";
+    }
+    .e-m-ios7 .icn-Notification:before
+    {
+        content: "\e727";
+    }
+    .e-m-ios7 .icn-Location:before
+    {
+        content: "\e728";
+    }
+    .e-m-ios7 .icn-Sound:before
+    {
+        content: "\e725";
+    }
+    .e-m-ios7 .icn-Brightness:before
+    {
+        content: "\e729";
+    }
+    .e-m-ios7 .icn-Wallpaper:before
+    {
+        content: "\e724";
+    }
+    .e-m-ios7 .icn-General:before
+    {
+        content: "\e726";
+    }
+
+
+    .e-m-android .icn-Airplan:before
+    {
+        content: "\e732";
+    }
+    .e-m-android .icn-WiFi:before
+    {
+        content: "\e72b";
+    }
+    .e-m-android .icn-Notification:before
+    {
+        content: "\e72f";
+    }
+    .e-m-android .icn-Location:before
+    {
+        content: "\e730";
+    }
+    .e-m-android .icn-Sound:before
+    {
+        content: "\e72d";
+    }
+    .e-m-android .icn-Brightness:before
+    {
+        content: "\e731";
+    }
+    .e-m-android .icn-Wallpaper:before
+    {
+        content: "\e72c";
+    }
+    .e-m-android .icn-General:before
+    {
+        content: "\e72e";
+    }
+
+    .e-m-windows .icn-Airplan:before, .e-m-flat .icn-Airplan:before
+    {
+        content: "\e722";
+    }
+    .e-m-windows .icn-WiFi:before, .e-m-flat .icn-WiFi:before
+    {
+        content: "\e718";
+    }
+    .e-m-windows .icn-Notification:before, .e-m-flat .icn-Notification:before
+    {
+        content: "\e71d";
+    }
+    .e-m-windows .icn-Location:before, .e-m-flat .icn-Location:before
+    {
+        content: "\e720";
+    }
+    .e-m-windows .icn-Sound:before, .e-m-flat .icn-Sound:before
+    {
+        content: "\e71b";
+    }
+    .e-m-windows .icn-Brightness:before, .e-m-flat .icn-Brightness:before
+    {
+        content: "\e721";
+    }
+    .e-m-windows .icn-Wallpaper:before, .e-m-flat .icn-Wallpaper:before
+    {
+        content: "\e71a";
+    }
+    .e-m-windows .icn-General:before, .e-m-flat .icn-General:before
+    {
+        content: "\e71c";
+    }
+
+
+    /*list sample base styles*/
+
+    .listboxsample
+    {
+        position: relative;
+        width: 100%;
+    }
+
+    .e-m-windows #templatelistcontainer
+    {
+        padding-top: 0px;
+    }
+
+    .e-m-windows .nonepadding
+    {
+        padding-left: 0px;
+    }
+
+    #templatelist .e-m-lv.e-m-windows.e-m-mobile.e-m-dark .e-m-grouplist
+    {
+        background: none repeat scroll 0 0 #1E1E1E;
+    }
+
+    #templatelist .e-m-lv .e-m-list-div
+    {
+        margin-left: 0px;
+    }
+
+    /* List Template Styles*/
+
+    #templatelist .designationstyle
+    {
+        float: right;
+        font-size: 12px;
+        position: relative;
+        right: 10px;
+        padding-right: 13px;
+        padding-top: 4px;
+    }
+
+    #templatelist .aboutstyle
+    {
+        display: block;
+        position: relative;
+        text-align: justify;
+        padding-right: 23px;
+        word-wrap: break-word;
+        font-size: 12px;
+        line-height: 20px;
+        overflow: hidden;
+    }
+
+    #templatelist .templatetext
+    {
+        font-weight: bolder;
+        position: relative;
+        font-size: 15px;
+    }
+
+    .listrightdiv
+    {
+        position: relative;
+        left: 10px;
+    }
+
+    #templatelist .e-m-lv .e-m-list .brooke
+    {
+        background-image: url('../themes/sample/templatelist/brooke.png');
+    }
+
+    #templatelist .e-m-lv .e-m-list .claire
+    {
+        background-image: url('../themes/sample/templatelist/claire.png');
+    }
+
+    #templatelist .e-m-lv .e-m-list .erik
+    {
+        background-image: url('../themes/sample/templatelist/erik.png');
+    }
+
+    #templatelist .e-m-lv .e-m-list .grace
+    {
+        background-image: url('../themes/sample/templatelist/grace.png');
+    }
+
+    #templatelist .e-m-lv .e-m-list .jacob
+    {
+        background-image: url('../themes/sample/templatelist/jacob.png');
+    }
+
+    #templatelist.e-m-lv.e-m-light .e-m-list.e-m-state-default .listrightdiv, #templatelist.e-m-ios7.e-m-lv.e-m-light .e-m-list.e-m-state-active .listrightdiv
+    {
+        color: #000000;
+    }
+
+    #templatelist.e-m-lv.e-m-dark .e-m-list .listrightdiv, #templatelist.e-m-lv.e-m-light .e-m-list.e-m-state-active .listrightdiv
+    {
+        color: #FFFFFF;
+    }
+
+    .jacob, .grace, .erik, .claire, .brooke
+    {
+        border: 1px solid #E5E5E5;
+        float: left;
+        height: 60px;
+        width: 51px;
+        background-repeat: no-repeat;
+        padding-left: 8px;
+    }
+
+    .e-m-windows .jacob, .e-m-windows .grace, .e-m-windows .erik, .e-m-windows .claire, .e-m-windows .brooke
+    {
+        border: 0.5px solid #E5E5E5;
+    }
+
+    .e-m-android .jacob, .e-m-android .grace, .e-m-android .erik, .e-m-android .claire, .e-m-android .brooke
+    {
+        border: 1px solid gray;
+    }
+
+    .cont-bg
+    {
+        height: 71px;
+        padding-top: 10px;
+        width: 100%;
+        padding-left: 5px;
+    }
+    /* Listbox API styles*/
+    .apiheader
+    {
+        padding-top: 5px;
+    }
+
+    .e-m-tablet .apiborder
+    {
+        padding: 20px;
+    }
+
+    .apicontent
+    {
+        height: 272px;
+    }
+
+    /*Listbox End*/
+
+
+    /*Menu*/
+
+    .appview.e-m-ios .e-m-menu-container
+    {
+        color: #454850;
+    }
+
+    .menu-app-name
+    {
+        font-size: 24px;
+        font-weight: bold;
+        float: left;
+    }
+
+    .menu-app-name-details
+    {
+        float: left;
+        font-size: 10px;
+    }
+
+    .menu-img-panel
+    {
+        padding-right: 8px;
+        float: left;
+        height: 70px;
+    }
+
+    .menu-app-detail-container
+    {
+        padding: 10px;
+    }
+
+
+    .menu-details
+    {
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    /*Menu*/
+
+
+    /*Progressbar*/
+    #progressSample
+    {
+        position: relative;
+        text-align: center;
+        top: 75px;
+        width: 280px;
+        margin: auto;
+    }
+    .progressEventLog
+    {
+        height: 125px;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .e-m-ios7 .progressbar_event div.sampebutton input
+    {
+        width: 90px;
+    }
+    .e-m-android .progressbar_event div.sampebutton, .e-m-windows .progressbar_event div.sampebutton
+    {
+        width: 110px;
+    }
+    /*Progressbar*/
+
+
+    /*Rating*/
+    .rating-default
+    {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .sample.rating-sample
+    {
+        padding: 0px;
+    }
+    .rating-parent
+    {
+        margin-top: 20px;
+    }
+    .rating-google
+    {
+        background-image: url("../themes/sample/google.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 130px;
+    }
+    .rating-child
+    {
+        text-align: center;
+    }
+    /*Rating*/
+
+
+    /* Rotator */
+    .scrollviewlabel
+    {
+        display: block;
+        margin-bottom: 5px;
+        line-height: 20px;
+    }
+    #scrollparent
+    {
+        margin: auto;
+    }
+    /*#scrollparent  .e-m-ios7.e-m-rotator .e-m-abs.e-m-sv-pagerbottom
+        {
+        bottom:98px;
+        }*/
+
+    .photo
+    {
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 96%;
+        margin: auto;
+        background-size: contain;
+    }
+    .photo1
+    {
+        background-image: url(../themes/sample/rotator/nature.jpg);
+    }
+    .photo2
+    {
+        background-image: url(../themes/sample/rotator/bird.jpg);
+    }
+    .photo3
+    {
+        background-image: url(../themes/sample/rotator/snowfall.jpg);
+    }
+    .photo4
+    {
+        background-image: url(../themes/sample/rotator/sculpture.jpg);
+    }
+    .photo5
+    {
+        background-image: url(../themes/sample/rotator/seaview.jpg);
+    }
+    .photo6
+    {
+        background-image: url(../themes/sample/rotator/tablet.jpg);
+    }
+    .photo7
+    {
+        background-image: url(../themes/sample/rotator/rose.jpg);
+    }
+    .photo8
+    {
+        background-image: url(../themes/sample/rotator/green.jpg);
+    }
+    .photo9
+    {
+        background-image: url(../themes/sample/rotator/nature.jpg);
+    }
+    .photo10
+    {
+        background-image: url(../themes/sample/rotator/snowfall.jpg);
+    }
+    .photo11
+    {
+        background-image: url(../themes/sample/rotator/rose.jpg);
+    }
+    .photo12
+    {
+        background-image: url(../themes/sample/rotator/wheat.jpg);
+    }
+    .photo13
+    {
+        background-image: url(../themes/sample/rotator/snow.jpg);
+    }
+    .photo14
+    {
+        background-image: url(../themes/sample/rotator/bread.jpg);
+    }
+    .photo15
+    {
+        background-image: url(../themes/sample/rotator/card.jpg);
+    }
+    /* Rotator End */
+
+
+    /*Slider*/
+    .sb-slidersample
+    {
+        margin: auto;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .sb-header
+    {
+        font-size: 30px;
+    }
+
+    .e-m-mobile .sb-header
+    {
+        font-size: 24px;
+    }
+
+    .sb-slidecaption
+    {
+        font-size: 100%;
+    }
+
+    .sb-slidelabel
+    {
+        font-size: 95%;
+        float: right;
+    }
+
+    .sb-emi
+    {
+        font-size: 90%;
+        text-align: center;
+    }
+
+    .sb-minlabel
+    {
+        font-size: 15px;
+        float: left;
+        padding-left: 20px;
+    }
+
+    .sb-maxlabel
+    {
+        font-size: 15px;
+        float: right;
+        padding-right: 20px;
+    }
+
+    .sb-slider .e-m-slider
+    {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    /*Slider*/
+
+    /*ProgressBar Start*/
+    #progressBar_eve
+    {
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    /*ProgressBar End*/
+    /*Tab*/
+    .e-m-ios7 .e-m-tabitem.e-m-state-default [class*="e-m-icon-"]:before
+    {
+        color: #9C9C9C;
+    }
+    .e-m-ios7 .e-m-tabitem.e-m-state-active [class*="e-m-icon-"]:before
+    {
+        color: #0079FF;
+    }
+
+    .e-m-icon-movies:before
+    {        
+        font-size: 30px;
+        left: -5px;
+        top: 8px;
+        font-family: ejmmobilefonts;
+        position: relative;
+    }
+
+    .e-m-icon-music:before
+    {        
+        font-size: 22px;
+        right: 4px;
+        top: 5px;
+        font-family: ejmmobilefonts;
+        position:relative;
+    }
+
+    .e-m-icon-favourites:before
+    {        
+        font-size: 27px;
+        right: 0;
+        top: 0;
+        top: 7px;
+        left: -5px;
+        position:relative;
+        font-family: ejmmobilefonts;
+    }
+
+    .e-m-icon-playlist:before
+    {        
+        font-size: 26px;
+        left: -3px;
+        top: 9px;
+        position:relative;
+        font-family: ejmmobilefonts;
+    }
+
+    .e-m-icon-featured:before
+    {        
+        font-size: 35px;
+        right: 10px;
+        top: 10px;
+        position:relative;
+    }
+
+    .e-m-icon-topcharts:before
+    {        
+        font-size: 24px;
+        left: -4px;
+        top: 6px;
+        font-family: ejmmobilefonts;
+        position:relative;
+    }
+
+    .e-m-icon-purchased:before
+    {        
+        font-size: 25px;
+        position:relative;
+        top: 6px;
+        right: 6px;
+        font-family: ejmmobilefonts;
+    }
+
+    .e-m-icon-updates:before
+    {        
+        font-size: 25px;
+        left: -5px;
+        top: 6px;
+        position:relative;
+        font-family: ejmmobilefonts;
+    }
+
+    .e-m-icon-fastfoods:before
+    {        
+        font-size: 25px;
+        right: 5px;
+        top: 7px;
+        position:relative;
+        font-family: ejmmobilefonts;
+    }
+
+    .e-m-icon-soups:before
+    {        
+        position:relative;
+        font-size: 26px;
+        right: 5px;
+        top: 7px;
+        font-family: ejmmobilefonts;
+    }
+
+    .e-m-icon-snacks:before
+    {        
+        font-size: 25px;
+        right: 3px;
+        top: 5px;
+        position:relative;
+        font-family: ejmmobilefonts;
+    }
+
+    .e-m-icon-beverages:before
+    {        
+        font-size: 26px;
+        right: 7px;
+        top: 9px;
+        position:relative;
+        font-family: ejmmobilefonts;
+    }
+    /*Tab*/
+
+
+    /*Textbox*/
+    .textbox_sample label, .textbox_sample .errormesssage_def
+    {
+        text-align: left;
+    }
+
+    .textbox_sample .submitbutton
+    {
+        text-align: center;
+    }
+
+    /*Textbox*/
+
+
+    /*TileView*/
+
+    .sample.tileview .e-m-tile.e-m-tile-wrapper
+    {
+        margin: 0px;
+    }
+    .sample.tileview .e-m-tile-wrappers
+    {
+        margin: 4px;
+    }
+    .sample.tileview .tablet
+    {
+        display: none;
+    }
+    #tilemed1.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-text.e-m-textalign-normal
+    {
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4);
+    }
+    .sample.tileview .e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        color: #FFFFFF;
+    }
+    #tilesm1.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e705";
+        font-family: ejmmobilefonts;
+        font-size: 43px;
+        left: 10px;
+        position: absolute;
+        top: 27px;
+    }
+    #tilesm2.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e704";
+        font-family: ejmmobilefonts;
+        font-size: 43px;
+        left: 15px;
+        position: absolute;
+        top: 31px;
+    }
+    #tilesm3.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e703";
+        font-family: ejmmobilefonts;
+        font-size: 43px;
+        left: 7px;
+        position: absolute;
+        top: 31px;
+    }
+    #tilesm4.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e702";
+        font-family: ejmmobilefonts;
+        font-size: 43px;
+        left: 10px;
+        position: absolute;
+        top: 31px;
+    }
+    .sample.tileview .e-m-tile.e-m-tile-wrapper.e-m-tile-medium .e-m-child-tile .e-m-tile-image:before
+    {
+        color: #FFFFFF;
+        font-family: ejmmobilefonts;
+        position: relative;
+    }
+    #tilemed2.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e715";
+        font-size: 46px;
+        left: 2px;
+        top: 60px;
+    }
+    #tilemed3.e-m-tile.e-m-tile-wrapper .e-m-child-tile .e-m-tile-image:before
+    {
+        content: "\e701";
+        font-size: 70px;
+        left: 6px;
+        top: 61px;
+    }
+    #tilemed1.e-m-tile.e-m-tile-wrapper, #tilemed1.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile, #tilesm3.e-m-tile.e-m-tile-wrapper, #tilesm3.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile, #tilewide1.e-m-tile.e-m-tile-wrapper, #tilewide1.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #2B80EA;
+    }
+    #tilesm1.e-m-tile.e-m-tile-wrapper, #tilesm1.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #D04B2B;
+    }
+    #tilesm2.e-m-tile.e-m-tile-wrapper, #tilesm2.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #D79317;
+    }
+    #tilesm4.e-m-tile.e-m-tile-wrapper, #tilesm4.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #5E3AB3;
+    }
+    #tilemed2.e-m-tile.e-m-tile-wrapper, #tilemed2.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #91149A;
+    }
+    #tilemed3.e-m-tile.e-m-tile-wrapper, #tilemed3.e-m-tile.e-m-tile-wrapper.e-m-windows .e-m-child-tile
+    {
+        background: #009D00;
+    }
+    .e-m-tile.e-m-tile-wrapper.e-m-ios .e-m-child-tile .e-m-tile-badge
+    {
+        z-index: 2;
+    }
+
+    .tiletdspacing
+    {
+        padding-bottom: 5px;
+        padding-right: 8px;
+        padding-top: 5px;
+    }
+
+    .secondrow
+    {
+        padding-top: 2px;
+    }
+
+    .lasttiletop
+    {
+        padding-top: 6px;
+    }
+
+    #tilewide1.e-m-tile.e-m-tile-wrapper.e-m-tile-wide
+    {
+        width: 268px;
+        padding: 0;
+    }
+    /*TileView*/
+
+
+
+    /*TimePicker*/
+    #timepickerSample
+    {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    /*TimePicker*/
+
+    /*Grid*/
+    .sample_grid
+    {
+        position: relative;
+    }
+    .e-m-windows .sample_grid
+    {
+        padding: 10px;
+    }
+    /*Grid*/
+    body.e-m-windows
+    {
+        background: #1A1A1A;
+    }
+    /*Barcode*/
+    #barcodeSample .e-barcode
+    {
+        margin: auto;
+    }
+}
+
+/*Drawer*/
+.e-m-sp-right.subpage.subview
+{
+    overflow: hidden;
+}
+.swipebutton
+{
+    background: url("sample/Arrow_right.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 100px;
+    position: absolute;
+    left: -2px;
+    top: -webkit-calc(50% - 50px);
+    top: -moz-calc(50% - 50px);
+    top: calc(50% - 50px);
+    width: 34px;
+}
+
+.e-m-android.e-m-dark .tempimage.e-m-state-active
+{
+    background-color: #31a2ce;
+}
+.e-m-android.e-m-light .tempimage.e-m-state-active
+{
+    background-color: #78c6e3;
+}
+.e-m-flat.e-m-dark .tempimage.e-m-state-active
+{
+    background-color: #f38529;
+}
+.e-m-ios7.e-m-dark .tempimage.e-m-state-active
+{
+    background-color: #4ca1ff;
+}
+.e-m-ios7.e-m-light .tempimage.e-m-state-active
+{
+    background-color: #d9d9d9;
+}
+.e-m-windows.e-m-dark .tempimage.e-m-state-active
+{
+    background-color: #1faeff;
+}
+.e-m-windows.e-m-light .tempimage.e-m-state-active
+{
+    background-color: #1faeff;
+}
+/*Drawer-END*/
+/*Tile*/
+
+#tile.e-m-windows
+{
+    background-color: #2E9AFE;
+}
+/*Radial Menu*/
+#radialmenu
+{
+    left: 0px;
+}
+
+/*Toolbar*/
+#toolbar-background
+{
+    background-image: url('sample/toolbar/sample.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+#toolbar_sample
+{
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+/*Toolbar*/
+
+/*Checkbox Alignment*/
+.chkboxdisplay table
+{
+    width: 100%;
+}
+
+/*Radial Menu*/
+.e-m-windows #defaultradialmenu, .e-m-windows #childradialmenu, .e-m-flat #defaultradialmenu, .e-m-flat #childradialmenu
+{
+    left: 10px;
+    position: absolute;
+}
+.textbox #splitview .e-m-sp-right.subpage, .textbox #splitview .e-m-sp-right.subpage .e-m-sp-rightwrapper
+{
+    height: auto !important;
+}
+
+/*Tab*/
+
+#tabdefault_wrapper .e-m-content, #tablod_wrapper .e-m-content, #tabsamp_wrapper .e-m-content
+{
+    padding: 0;
+}
+
+/*Android splitpane Toolbar icon*/
+#androidheader.e-m-tb.e-m-android .e-m-titleicon.e-m-showtitle-true,
+#splitview_toolbar.e-m-tb.e-m-android .e-m-titleicon.e-m-showtitle-true {
+    width:42px;
+}
+#apirotator .e-m-header, #splitview .e-m-sp-right #apis_rightscroller #apirotator .e-m-header.e-m-windows
+{
+    display: inline-block;
+}
+
+/*Digital Gauge*/
+
+.digital-frame
+{
+    background-image: url("../themes/sample/frame.png");
+    background-repeat: no-repeat;
+}
+/*Digital Gauge*/
+
+/*Nested Radial Menu */
+
+div[data-url="nestedradialmenu"] .e-m-header .e-m-header-text {
+    font-size: 17px;
+}
+/*Nested Radial Menu */
+
+/*** Navigatation drawer ***/
+#splitview .e-m-nb.e-m-nb-layout.e-m-nb-overlay{
+    z-index: 500005 !important; /** Since ej.getMaxZindex() returns browser z-index max value*/
+}

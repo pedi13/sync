@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html>
+<head data-ej-theme="light">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="syncfusion" />
+    <meta name="author" content="syncfusion" />
+    <title>Essential Studio for Javascript Mobile - Health Tracker</title>
+  <link rel="shortcut icon" href="../../../themes/sample/favicon.ico" />
+    <link rel="stylesheet" href="../../themes/bootstrap.css" />
+    <link rel="stylesheet" href="../../themes/ej.mobile.all.min.css" />
+    <link rel="stylesheet" href="../../themes/samplebrowser.css" />
+    <link rel="stylesheet" href="../../themes/samplestyle.css" />
+    <link rel="stylesheet" href="../../themes/responsive.css" />
+    <link rel="stylesheet" href="../../themes/ej.showcase.min.css" />
+    <link rel="stylesheet" href="../../themes/ej.showcase_responsive.min.css" />
+    <script type="text/javascript" src="../../scripts/jquery.globalize.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.de-DE.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.en-US.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.fr-FR.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cultures/globalize.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../scripts/support.js"></script>
+    <script type="text/javascript" src="../../scripts/jsondata.min.js"></script>
+    <script type="text/javascript" src="../../scripts/chartrender.js"></script>
+    <script type="text/javascript" src="../../scripts/treemapdata.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../../scripts/jsrender.min.js"></script>
+    <script type="text/javascript" src="../../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../scripts/sampleslist.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.mobile.all.min.js"></script>
+    <script type="text/javascript" src="../../scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../../scripts/knockout-min.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.widget.angular.min.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.widget.ko.min.js"></script>
+    <script type="text/javascript" src="../../scripts/ej.showcase.min.js"></script>
+    <script type="text/javascript" src="../../scripts/expenseanalysis.js"></script>
+    <script type="text/javascript" src="../../scripts/healthtracker.js"></script>
+    <script type="text/javascript" src="../../scripts/salesdashboard.js"></script>
+    <script type="text/javascript" src="../../scripts/stockanalysis.js"></script>
+    <script type="text/javascript" src="../../scripts/samplebrowser.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            renderHealthElements();
+            $(document).bind("subviewtransfer", refreshHealthScroller);
+        });
+    </script>
+</head>
+<body>
+    <div data-role="appview" class="healthpage e-m-user-select e-m-light" data-appcache="true">
+        <div class="healthTracker subpage">
+            <!-- Header Section -->
+            <div id="healthsampleheader" data-ej-title="Health Tracker" data-ej-showleftbutton="true"
+                data-ej-leftbuttoncaption="Back" data-role="ejmheader" data-ej-theme="dark" data-ej-position="normal">
+            </div>
+            <!-- Mobile Header Section  and Person Details Section -->
+            <div id="mobilehealthsampleheader" data-ej-title="Health Tracker" data-ej-templateid="mobheadertemplate"
+                data-ej-showleftbutton="true" data-ej-leftbuttoncaption="Back" data-role="ejmheader"
+                data-ej-theme="dark" data-ej-position="normal">
+            </div>
+            <div id="mobheadertemplate">
+                <a data-role="ejmactionlink" data-ej-ios7-style="back">Back</a>
+                <div class="e-m-header-left">
+                    <div class="e-m-header-button e-m-fontimage">
+                    </div>
+                </div>
+                <div class="personpic"></div>
+                <div class="mobdetails">
+                    <div class="name">
+                        Andrew Fuller
+                    </div>
+                    <div class="age">
+                        34 years/175 cm/72.3 Kg
+                    </div>
+                </div>
+            </div>
+            <!-- PersonalDetails Section -->
+            <div id="healthscroll">
+                <div>
+                    <div class="persondetails">
+                        <div id="heading">
+                            <div class="personpic"></div>
+                            <div class="persondet">
+                                <div class="name">
+                                    Andrew Fuller
+                                </div>
+                                <div class="age">
+                                    34 years / 175 cm
+                                </div>
+                            </div>
+                            <div class="personsym"></div>
+                            <div style="margin-right: 48px; float: right;">
+                                <div class="weightdiv">
+                                    <label>
+                                        Weight</label>
+                                    <div class="weight">
+                                        <b>72.3</b>
+                                        <label>
+                                            Kg</label>
+                                    </div>
+                                </div>
+                                <div class="bmidiv">
+                                    <label>
+                                        BMI</label>
+                                    <div class="bmi">
+                                        <b>21.7</b>
+                                        <label>
+                                            Kg/m2</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Gauge Section -->
+                    <div id="gaugeScrl">
+                    </div>
+                    <!--Add meal Section-->
+                    <div id="MealSummary">
+                        <!-- Pie Chart Section -->
+                        <div id="chartdiv" class="chartimage chartdata">
+                            <div class="pievalue">
+                                <div class="calorie">
+                                    <div class="innercircle">
+                                        <label id="ChartCalValue">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="healthchart">
+                            </div>
+                        </div>
+                        <!-- Grid Section -->
+                        <div class="griddata">
+                            <div class="addmeal">
+                                <div class="addmealinner">
+                                    <div>
+                                        Add Meal
+                                    </div>
+                                    <div class="addmealimg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id='healthgrid'>
+                                <div id="gridadd">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scroller -->
+            <div id="healthmainscroll" data-role="ejmscrollpanel" data-ej-relative="true" data-ej-target="healthscroll"
+                data-ej-enablehrscroll="false" data-ej-adjustfixedposition="false">
+            </div>
+            <!--            <div id="gaugeScroll" data-role="ejmscrollpanel" data-ej-enablehrscroll="true"
+                data-ej-relative="true" data-ej-target="gaugeScrl" data-ej-adjustfixedposition="false">
+            </div>-->
+        </div>
+        <!-- Add Dialog Section -->
+        <div id="addpage" class="subpage addpage">
+            <div id="healthaddheader" data-ej-windows-customtext="true" data-ej-showleftbutton="true"
+                data-ej-showrightbutton="true" data-ej-rightbuttontap="addEntry" data-ej-rightbuttoncaption="Done"
+                data-ej-title="Add Food" data-role="ejmheader" data-ej-theme="light" data-ej-position="normal">
+            </div>
+            <div id="addtoolbar" data-role="ejmtoolbar" data-ej-windows-position="fixed" data-ej-templateid="toolbartemplate"
+                data-ej-position="normal" data-ej-android-title="Add Food" data-ej-touchend="addEntry"
+                data-ej-theme="light" id="toolbaritem">
+                <ul>
+                    <li class="donewindows" data-ej-iconname="done"></li>
+                    <li data-ej-iconname="close"></li>
+                </ul>
+            </div>
+            <div id="toolbartemplate">
+                <div class="donebtn e-m-icon-android-apidone">
+                    Done
+                </div>
+            </div>
+            <div id="addFoodScroller">
+                <div>
+                    <div id="formwrapper">
+                    </div>
+                </div>
+            </div>
+            <div id="healthsubscroll" data-role="ejmscrollpanel" data-ej-target="addFoodScroller" data-ej-adjustfixedposition="true">
+            </div>
+            <script id="gaugetemplate" type="text/x-jsrender"> 
+            <div id="todayDetails">
+                            <div class="gauge">
+                                <div class="wrap">
+                                    <div id="GaugeRDI">
+                                    </div>
+                                    <label class="rdilabel">
+                                        RDI - 325/1000</label><label class="pending rdipenlabel">675 calories pending</label>
+                                </div>
+                            </div>
+                            <div class="gauge">
+                                <div class="wrap">
+                                    <div id="GaugeBurnt">
+                                    </div>
+                                    <label id="callabel">
+                                        Cal To burn - 465/1000</label><label id="callabelpending" class="pending">535 calories
+                                            pending</label>
+                                </div>
+                            </div>
+                            <div class="gauge">
+                                <div class="stepfloor">
+                                    <div class="wrap">
+                                        <div class="chartimage" id="StepChartDiv">
+                                            <div id="ChartStep">
+                                                <div class="stepcenter">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label id="steplabel">
+                                            Step - 65/100</label><label id="steplabelpending" class="pending">35 steps pending</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gauge">
+                                <div class="stepfloor">
+                                    <div class="wrap">
+                                        <div class="chartimage" id="FloorChartDiv">
+                                            <div id="ChartFloor">
+                                                <div class="stepfloorcenter">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label id="floorlabel">
+                                            Floor - 7/10</label><label id="floorlabelpending" class="pending">3 floors pending</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="rotatorguage"></div>
+            </script>
+            <script id="addpageform" type="text/x-jsrender">
+            <div class="dialogcontentwrapper">
+                    <form class="additemform">
+                    <div class="fieldentry">
+                        <div class="entrylabel">
+                            Food Type
+                        </div>
+                        <div class="entryfield">
+                            <input id="foodtypeinput" data-role="ejmtextbox" type="text" name="food" required />
+                            <label class="error" for="foodtypeinput" generated="true"></label> 
+                        </div>
+                    </div>
+                    <div class="fieldentry">
+                        <div class="entrylabel">
+                            Fat
+                        </div>
+                        <div class="entryfield">
+                            <input id="fatinput" data-role="ejmtextbox" type="tel" name="fat" required /> 
+                            <label class="error" for="fatinput" generated="true"></label>
+                        </div>
+                    </div>
+                    <div class="fieldentry">
+                        <div class="entrylabel">
+                            Carb
+                        </div>
+                        <div class="entryfield">
+                            <input id="carbinput" data-role="ejmtextbox" type="tel" name="carb" required /> 
+                            <label class="error" for="carbinput" generated="true"></label>
+                        </div>
+                    </div>
+                    <div class="fieldentry">
+                        <div class="entrylabel">
+                            Protein
+                        </div>
+                        <div class="entryfield">
+                            <input id="proteininput" data-role="ejmtextbox" type="tel" name="protein" required /> 
+                            <label class="error" for="proteininput" generated="true"></label>
+                        </div>
+                    </div>
+                    <div class="fieldentry">
+                        <div class="entrylabel">
+                            Calorie
+                        </div>
+                        <div class="entryfield">
+                            <input id="calorieinput" data-role="ejmtextbox" type="tel" name="calorie" required /> 
+                            <label class="error" for="calorieinput" generated="true"></label>
+                        </div>
+                    </div>
+                    <div class="fieldentry">
+                        <div class="entrylabel">
+                            Calorie Burnt
+                        </div>
+                        <div class="entryfield">
+                            <input id="calorieburntinput" data-role="ejmtextbox" type="tel" name="calorieburnt"
+                                required /> 
+                                <label class="error" for="calorieburntinput" generated="true"></label>
+                        </div>
+                    </div>
+            </form>
+            </div>
+            </script>
+            <script type="text/javascript">
+                $(document).bind("viewbeforetransfer", renderHealthElements);
+                $(document).bind("subviewtransfer", refreshHealthScroller); 
+            </script>
+        </div>
+    </div>
+</body>
+</html>
